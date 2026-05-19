@@ -1,0 +1,66 @@
+# --- DÉPENDANCES ---
+# Ne jamais envoyer les modules installés (trop lourds et recréables via npm/yarn)
+node_modules/
+jspm_packages/
+
+# --- BUILD & OUTPUT ---
+# Les fichiers générés lors de la compilation (Next.js utilise .next)
+.next/
+out/
+build/
+dist/
+
+# --- VARIABLES D'ENVIRONNEMENT (CRITIQUE) ---
+# Ne JAMAIS pousser tes clés API ou mots de passe sur GitHub
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
+
+# --- LOGS & DEBUG ---
+# Fichiers de logs générés par le système ou les erreurs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+.pnpm-debug.log*
+
+# --- CONFIGURATION D'ÉDITEUR (VS CODE, etc.) ---
+# Pour éviter de polluer le projet avec les réglages de ton propre ordi
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_lock
+
+# --- SYSTÈME (MAC, WINDOWS) ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- TESTS ---
+coverage/
+.nyc_output/
+
+# --- AUTRES ---
+# Si tu utilises des outils comme Turbo ou Playwright
+.turbo
+playwright-report/
+blob-report/
+.claude
+.github
+specs/
+
+# --- OUTILS LOCAUX (SPECKIT / SPECIFY) ---
+.specify/
+SPECKIT_GUIDE.md
+
+# --- CACHE TYPESCRIPT ---
+tsconfig.tsbuildinfo
