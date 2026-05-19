@@ -11,7 +11,7 @@ const PROPS: Prop[] = [
   {
     icon: BadgeEuro,
     title: "Prix bas",
-    sub: "À partir de 290 €",
+    sub: "À partir de 349 €",
   },
   {
     icon: Sparkles,

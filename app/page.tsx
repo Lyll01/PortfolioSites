@@ -56,7 +56,7 @@ export default function HomePage() {
                 {
                   "@type": "Offer",
                   name: "Pack Starter — Site One Page",
-                  price: "290",
+                  price: "349",
                   priceCurrency: "EUR",
                 },
                 {
