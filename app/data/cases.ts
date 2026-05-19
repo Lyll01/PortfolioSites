@@ -35,7 +35,7 @@ export const CASES: Case[] = [
       { label: "Position mots-clés", before: "#42", after: "#4" },
     ],
     image: {
-      src: "/cases/belfield.png",
+      src: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cases/belfield.png`,
       alt: "Page d'accueil du site Festival Belfield",
       width: 1600,
       height: 1200,
@@ -58,7 +58,7 @@ export const CASES: Case[] = [
       { label: "Trafic mensuel", before: "0", after: "100 / mois" },
     ],
     image: {
-      src: "/cases/cathy.png",
+      src: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cases/cathy.png`,
       alt: "Page d'accueil du site Cathy coiffeuse à domicile",
       width: 1600,
       height: 1280,
