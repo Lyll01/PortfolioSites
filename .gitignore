@@ -55,7 +55,6 @@ coverage/
 playwright-report/
 blob-report/
 .claude
-.github
 specs/
 
 # --- OUTILS LOCAUX (SPECKIT / SPECIFY) ---
