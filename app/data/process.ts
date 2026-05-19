@@ -28,7 +28,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
       "Je conçois la maquette visuelle de votre site, pensée pour votre activité et vos clients. Vous découvrez à quoi ressemblera votre futur site.",
     deliverables: [
       "Direction visuelle proposée",
-      "Maquette desktop + mobile",
+      "Première Maquette",
       "Structure des pages détaillée",
     ],
   },
@@ -47,7 +47,6 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: 4,
     title: "Abonnement & mise en ligne",
-    duration: "1 à 2 semaines",
     description:
       "Vous choisissez votre formule d'hébergement, je développe et publie votre site. Votre activité est enfin visible sur Google.",
     deliverables: [

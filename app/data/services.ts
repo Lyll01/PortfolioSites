@@ -150,7 +150,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     included: [
       "Hébergement haute performance",
       "Nom de domaine offert",
-      "Certificat SSL inclus",
+      "Certificat SSL (Https) inclus",
       "Sauvegardes automatiques hebdomadaires",
       "Disponibilité 24/7",
     ],
