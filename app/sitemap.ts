@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { STUDIO } from "./data/navigation";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = STUDIO.url;
   const now = new Date();
