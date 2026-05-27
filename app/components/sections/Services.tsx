@@ -173,7 +173,7 @@ export function Services() {
             />
           </Reveal>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:max-w-4xl">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:max-w-6xl">
             {RECURRING_PLANS.map((plan, i) => (
               <Reveal key={plan.italic} delay={i * 100}>
                 <RecurringCard plan={plan} />
@@ -308,6 +308,12 @@ function RecurringCard({ plan }: { plan: RecurringPlan }) {
             </li>
           ))}
         </ul>
+      )}
+
+      {plan.note && (
+        <p className="border-t border-cream/10 pt-4 text-xs italic text-cream/45">
+          {plan.note}
+        </p>
       )}
 
       <footer className="mt-auto border-t border-cream/10 pt-5">

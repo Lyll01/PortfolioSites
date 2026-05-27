@@ -6,6 +6,14 @@ import { ValueProps } from "../ui/ValueProps";
 import { Wordmark } from "../ui/Wordmark";
 import { STUDIO } from "@/app/data/navigation";
 
+const AUDIENCES = [
+  "PME",
+  "Associations",
+  "Auto-entrepreneurs",
+  "Indépendants",
+  "Artisans",
+] as const;
+
 export function Hero() {
   return (
     <section
@@ -20,7 +28,9 @@ export function Hero() {
               <div className="flex items-center gap-3">
                 <Wordmark size="sm" />
                 <span className="h-px w-12 bg-ink/20" aria-hidden />
-                <Eyebrow className="!mt-0">STUDIO INDÉPENDANT · FR</Eyebrow>
+                <Eyebrow className="!mt-0">
+                  POUR LES PME · ASSOS · INDÉPENDANTS
+                </Eyebrow>
               </div>
             </Reveal>
 
@@ -40,11 +50,28 @@ export function Hero() {
               </h1>
             </Reveal>
 
-            <Reveal delay={320}>
-              <p className="mt-10 max-w-[560px] text-lg leading-relaxed text-ink-soft md:text-xl">
-                Conception, design, développement et SEO pour artisans,
-                indépendants et PME qui veulent un site dont ils sont fiers — et
-                qui rapporte.
+            <Reveal delay={280}>
+              <div className="mt-10 flex flex-col gap-4">
+                <span className="mono-label text-ash">
+                  C&apos;est fait pour vous si vous êtes&nbsp;:
+                </span>
+                <ul className="flex flex-wrap gap-2.5">
+                  {AUDIENCES.map((audience) => (
+                    <li
+                      key={audience}
+                      className="rounded-full border border-ink/15 bg-ink/[0.03] px-4 py-2 text-sm font-medium text-ink"
+                    >
+                      {audience}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={400}>
+              <p className="mt-8 max-w-[560px] text-lg leading-relaxed text-ink-soft md:text-xl">
+                Conception, design, développement et référencement pour ceux qui veulent
+                un site dont ils sont fiers.
               </p>
             </Reveal>
 

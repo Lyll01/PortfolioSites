@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
-import { SocialIcon } from "../ui/SocialIcon";
 import { Wordmark } from "../ui/Wordmark";
 import { NAV_LINKS, SOCIAL_LINKS, STUDIO } from "@/app/data/navigation";
 
@@ -91,22 +90,6 @@ export function Footer() {
                   {STUDIO.phone}
                 </a>
               </li>
-            </ul>
-
-            <ul className="mt-6 flex gap-3">
-              {SOCIAL_LINKS.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={s.label}
-                    className="inline-flex h-10 w-10 items-center justify-center border border-cream/20 text-cream/80 transition-colors hover:border-vermillion hover:text-vermillion"
-                  >
-                    <SocialIcon name={s.icon} size={18} />
-                  </a>
-                </li>
-              ))}
             </ul>
 
             <div className="mt-8">

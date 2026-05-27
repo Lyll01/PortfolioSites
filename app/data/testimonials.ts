@@ -4,9 +4,8 @@ export type Stat = {
 };
 
 export const STATS: Stat[] = [
-  { value: "+25", label: "sites livrés depuis 2022" },
-  { value: "+1 800%", label: "trafic SEO moyen après 6 mois" },
-  { value: "4.9/5", label: "note moyenne clients" },
+  { value: "+5", label: "sites livrés depuis 2025" },
+  { value: "+600%", label: "trafic SEO moyen après 6 mois" },
   { value: "< 48h", label: "temps de réponse moyen" },
 ];
 
@@ -17,24 +16,18 @@ export type Testimonial = {
 };
 
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote:
-      "Un travail d'orfèvre. Le site nous ressemble vraiment, et le trafic Google a doublé en trois mois.",
-    author: "Marie L.",
-    role: "Présidente, Association Belfield",
-  },
-  {
-    quote:
-      "Je n'ai jamais eu autant de demandes de rendez-vous. Pédagogue, à l'écoute, vraiment investi du début à la fin.",
-    author: "Cathy D.",
-    role: "Coiffeuse à domicile, Toulouse",
-  },
-  {
-    quote:
-      "A su transformer un brief flou en un site dont je suis fier. Recommandé les yeux fermés.",
-    author: "Thomas D.",
-    role: "Artisan menuisier, Lot",
-  },
+{
+  quote:
+    "Nous n’avions pas de site auparavant. Aujourd’hui, le festival bénéficie d’une vraie présence en ligne, beaucoup plus professionnelle et visible pour le public.",
+  author: "Jules D.",
+  role: "Président, Association Belfield",
+},
+{
+  quote:
+    "Depuis la mise en place du site, j’ai clairement constaté une augmentation de mes nouveaux clients et de mes demandes de rendez-vous. Le site m’apporte une vraie visibilité dans mon secteur.",
+  author: "Cathy D.",
+  role: "Coiffeuse à domicile, Toulouse",
+},
 ];
 
 export const CLIENT_LOGOS: string[] = [

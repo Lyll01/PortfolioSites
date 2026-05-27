@@ -111,8 +111,11 @@ export function Contact() {
   );
 }
 
+type FieldErrors = Record<string, string>;
+
 function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
+  const [errors, setErrors] = useState<FieldErrors>({});
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -122,10 +125,45 @@ function ContactForm() {
       setState("success");
       return;
     }
+
+    // Validation des champs obligatoires
+    const nextErrors: FieldErrors = {};
+    const name = (fd.get("name") as string)?.trim();
+    const email = (fd.get("email") as string)?.trim();
+    const type = (fd.get("type") as string)?.trim();
+    const message = (fd.get("message") as string)?.trim();
+
+    if (!name) nextErrors.name = "Merci d'indiquer votre nom.";
+    if (!email) nextErrors.email = "Merci d'indiquer votre email.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      nextErrors.email = "Cet email ne semble pas valide.";
+    if (!type) nextErrors.type = "Sélectionnez un type de projet.";
+    if (!message) nextErrors.message = "Décrivez votre besoin en quelques mots.";
+    else if (message.length < 20)
+      nextErrors.message = "Votre message est un peu court (20 caractères min.).";
+
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) {
+      setState("idle");
+      return;
+    }
+
     setState("submitting");
-    // Simulate request (no API yet)
-    await new Promise((r) => setTimeout(r, 1200));
-    setState("success");
+
+    fd.append("access_key", "17454c38-1863-4ae9-96d5-4d2830e35155");
+    fd.append("subject", "Nouveau message depuis le site");
+    fd.append("from_name", "Formulaire de contact");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
+      });
+      const data = await response.json();
+      setState(data.success ? "success" : "error");
+    } catch {
+      setState("error");
+    }
   };
 
   if (state === "success") {
@@ -153,6 +191,16 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      onChange={(e) => {
+        const { name } = e.target;
+        if (name && errors[name]) {
+          setErrors((prev) => {
+            const next = { ...prev };
+            delete next[name];
+            return next;
+          });
+        }
+      }}
       className="flex flex-col gap-7 bg-cream border border-ink/10 p-8 lg:p-12"
       noValidate
     >
@@ -166,8 +214,20 @@ function ContactForm() {
         aria-hidden
       />
 
-      <Field id="name" label="Nom complet *" required type="text" />
-      <Field id="email" label="Email *" required type="email" />
+      <Field
+        id="name"
+        label="Nom complet *"
+        required
+        type="text"
+        error={errors.name}
+      />
+      <Field
+        id="email"
+        label="Email *"
+        required
+        type="email"
+        error={errors.email}
+      />
       <Field id="company" label="Entreprise / Association" type="text" />
 
       <Select
@@ -175,6 +235,7 @@ function ContactForm() {
         label="Type de projet *"
         required
         options={PROJECT_TYPES}
+        error={errors.type}
       />
       <Select id="budget" label="Budget envisagé" options={BUDGETS} />
 
@@ -184,7 +245,15 @@ function ContactForm() {
         required
         rows={6}
         minLength={20}
+        error={errors.message}
       />
+
+      {state === "error" && (
+        <p className="text-sm text-vermillion">
+          Une erreur est survenue lors de l&apos;envoi. Réessayez, ou
+          écrivez-moi directement à {STUDIO.email}.
+        </p>
+      )}
 
       <Button
         type="submit"
@@ -210,11 +279,13 @@ function Field({
   label,
   type = "text",
   required = false,
+  error,
 }: {
   id: string;
   label: string;
   type?: string;
   required?: boolean;
+  error?: string;
 }) {
   return (
     <label className="flex flex-col gap-2">
@@ -225,9 +296,24 @@ function Field({
         type={type}
         required={required}
         aria-required={required}
-        className="border-b border-ink/20 bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-vermillion focus:border-b-2"
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+        className={`border-b bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-b-2 ${
+          error
+            ? "border-vermillion focus:border-vermillion"
+            : "border-ink/20 focus:border-vermillion"
+        }`}
       />
+      {error && <FieldError id={id}>{error}</FieldError>}
     </label>
+  );
+}
+
+function FieldError({ id, children }: { id: string; children: string }) {
+  return (
+    <span id={`${id}-error`} className="text-xs text-vermillion">
+      {children}
+    </span>
   );
 }
 
@@ -236,11 +322,13 @@ function Select({
   label,
   options,
   required = false,
+  error,
 }: {
   id: string;
   label: string;
   options: SelectItem[];
   required?: boolean;
+  error?: string;
 }) {
   return (
     <label className="flex flex-col gap-2">
@@ -250,8 +338,14 @@ function Select({
         name={id}
         required={required}
         aria-required={required}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
         defaultValue=""
-        className="border-b border-ink/20 bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-vermillion focus:border-b-2"
+        className={`border-b bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-b-2 ${
+          error
+            ? "border-vermillion focus:border-vermillion"
+            : "border-ink/20 focus:border-vermillion"
+        }`}
       >
         {options.map((item) =>
           "options" in item ? (
@@ -269,6 +363,7 @@ function Select({
           ),
         )}
       </select>
+      {error && <FieldError id={id}>{error}</FieldError>}
     </label>
   );
 }
@@ -279,12 +374,14 @@ function Textarea({
   rows = 5,
   required = false,
   minLength,
+  error,
 }: {
   id: string;
   label: string;
   rows?: number;
   required?: boolean;
   minLength?: number;
+  error?: string;
 }) {
   return (
     <label className="flex flex-col gap-2">
@@ -294,10 +391,17 @@ function Textarea({
         name={id}
         required={required}
         aria-required={required}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
         rows={rows}
         minLength={minLength}
-        className="border-b border-ink/20 bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-vermillion focus:border-b-2 resize-y"
+        className={`border-b bg-transparent pb-2 text-base text-ink outline-none transition-colors focus:border-b-2 resize-y ${
+          error
+            ? "border-vermillion focus:border-vermillion"
+            : "border-ink/20 focus:border-vermillion"
+        }`}
       />
+      {error && <FieldError id={id}>{error}</FieldError>}
     </label>
   );
 }

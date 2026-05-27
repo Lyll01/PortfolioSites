@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
     italic: "Sur mesure",
     tagline: "PROJET SPÉCIFIQUE",
     description:
-      "Votre projet sort du cadre des packs ? Boutique en ligne, plateforme métier, fonctionnalité particulière, refonte ambitieuse… On en parle pour vous proposer une solution vraiment adaptée.",
+      "Votre projet sort du cadre des packs ? On en parle pour vous proposer une solution vraiment adaptée.",
     deliverables: [
       "Évaluation gratuite de votre besoin",
       "Devis détaillé et transparent",
@@ -137,6 +137,7 @@ export type RecurringPlan = {
   price: string;
   included: string[];
   excluded?: string[];
+  note?: string;
   objective: string;
   featured?: boolean;
 };
@@ -148,46 +149,51 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     tagline: "L'essentiel pour que votre site reste en ligne",
     price: "9 €/mois",
     included: [
-      "Hébergement haute performance",
-      "Nom de domaine offert",
-      "Certificat SSL (Https) inclus",
-      "Sauvegardes automatiques hebdomadaires",
-      "Disponibilité 24/7",
+      "Hébergement du site",
+      "Certificat SSL (HTTPS)",
+      "Monitoring de disponibilité (alertes en cas de panne)",
+      "Sauvegarde automatique",
+      "Maintenance technique de base (mise à jour / sécurité)",
+      "Support par email léger",
     ],
     objective:
       "Garantir que votre site est toujours en ligne, rapide et sécurisé.",
   },
   {
     name: "Hébergement",
-    italic: "& SEO local",
-    tagline: "Recommandé — pour être trouvé sur Google",
+    italic: "& Visibilité locale",
+    tagline: "Recommandé — pour être visible localement",
     price: "29 €/mois",
     included: [
-      "Tout du pack Hébergement simple",
-      "Optimisation SEO locale",
-      "Gestion Google Business Profile",
-      "1 modification du site / mois",
-      "1 adresse Mail personnalisé",
-      "Support prioritaire",
+      "Hébergement & maintenance",
+      "Google Business Profile",
+      "SEO local de base (optimisation fiche + site)",
+      "1 modification légère / mois",
+      "Monitoring site",
+      "Support standard",
     ],
     objective:
-      "Faire venir des clients en apparaissant dans les recherches locales sur Google.",
+      "Votre entreprise est visible localement sur Google et reste à jour.",
     featured: true,
   },
-{
-  name: "Hébergement",
-  italic: "& SEO PRO",
-  tagline: "Recommandé — pour dominer Google localement",
-  price: "59 €/mois",
-  included: [
-    "Tout du pack Hébergement & SEO local",
-    "Optimisation SEO avancée (technique + contenu)",
-    "Recherche et optimisation de mots-clés stratégiques",
-    "Optimisation des pages pour le positionnement Google",
-    "Amélioration continue du référencement (SEO on-page)",
-    "Suivi des performances SEO mesuel (positions + trafic)",
-  ],
-  objective:
-    "Positionner votre site dans les premiers résultats Google sur votre activité afin de générer un flux régulier de clients qualifiés.",
-}
+  {
+    name: "Hébergement",
+    italic: "& Croissance web",
+    tagline: "Recommandé — pour attirer plus de clients",
+    price: "59 €/mois",
+    included: [
+      "Hébergement & maintenance du site",
+      "Google Business Profile (optimisation et suivi)",
+      "Optimisation SEO avancée du site",
+      "Recherche de mots-clés stratégiques",
+      "Optimisation des pages pour Google (SEO on-page)",
+      "Création ou amélioration de contenu SEO (pages ou sections)",
+      "Suivi mensuel des performances (trafic + positionnement)",
+      "Jusqu'à 2 demandes de modifications / mois (textes, images, horaires, ajustements légers de sections)",
+      "Optimisation continue du site (améliorations SEO et structurelles progressives)",
+    ],
+    note: "Le service de modifications vise à maintenir et améliorer le site, et non à fonctionner comme un service de développement à la demande illimitée.",
+    objective:
+      "Améliorer votre position Google et attirer plus de clients chaque mois.",
+  },
 ];

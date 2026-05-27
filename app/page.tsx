@@ -45,10 +45,6 @@ export default function HomePage() {
             areaServed: { "@type": "Country", name: "France" },
             priceRange: "€",
             slogan: "Prix bas, qualité, rapidité, proximité.",
-            sameAs: [
-              "https://linkedin.com/company/atelierwebfrance",
-              "https://instagram.com/atelierwebfrance",
-            ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Création de sites web & SEO",

@@ -28,12 +28,19 @@ export const CASES: Case[] = [
     italic: "local",
     description:
       "Un festival qui n'avait pas de site web a vu sa visibilité et sa crédibilité grandir grâce à un site sur-mesure dans leur univers, et un référencement dans toute la région pour attirer de nouveaux festivaliers.",
-    services: ["Pack Pro", "SEO local", "Maintenance"],
+    services: ["Pack Buisness", "SEO local", "Option: Newsletter"],
     results: [
-      { label: "Trafic Google", before: "120 / mois", after: "2 400 / mois" },
-      { label: "Formulaires", before: "2 / mois", after: "18 / mois" },
-      { label: "Position mots-clés", before: "#42", after: "#4" },
-    ],
+  {
+    label: "Visites du site",
+    before: "0 / mois",
+    after: "300 / mois"
+  },
+  {
+    label: "Visibilité Google",
+    before: "non visible",
+    after: "présent sur recherches locales + Google Events"
+  }
+],
     image: {
       src: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cases/belfield.png`,
       alt: "Page d'accueil du site Festival Belfield",
@@ -47,16 +54,23 @@ export const CASES: Case[] = [
     client: "Cathy — coiffeuse à domicile",
     sector: "Indépendante locale",
     year: "2025",
-    title: "Site vitrine +",
+    title: "Site vitrine",
     italic: "Google Business",
     description:
       "Une artisane qui voulait sortir des annuaires. Site simple, rapide, design soigné, et un travail SEO local autour de Toulouse pour transformer chaque recherche en appel.",
-    services: ["Pack Business", "SEO local", "Google Business"],
+    services: ["Pack Starter", "SEO local", "Google Business"],
     results: [
-      { label: "Appels entrants", before: "1-2 / sem", after: "8-10 / sem" },
-      { label: "1ère page Google", before: "0%", after: "80%" },
-      { label: "Trafic mensuel", before: "0", after: "100 / mois" },
-    ],
+  {
+    label: "Nouveau clients",
+    before: "1–2 / mois",
+    after: "5-7 / mois"
+  },
+  {
+    label: "Position sur Google",
+    before: "Non positionnée",
+    after: "Présente sur recherches locales (coiffeuse + ville)"
+  }
+],
     image: {
       src: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/cases/cathy.png`,
       alt: "Page d'accueil du site Cathy coiffeuse à domicile",

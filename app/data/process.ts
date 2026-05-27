@@ -47,6 +47,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: 4,
     title: "Abonnement & mise en ligne",
+    duration: "",
     description:
       "Vous choisissez votre formule d'hébergement, je développe et publie votre site. Votre activité est enfin visible sur Google.",
     deliverables: [
