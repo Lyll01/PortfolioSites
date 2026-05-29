@@ -81,12 +81,26 @@ export const SERVICES: Service[] = [
 export type ExtraService = {
   label: string;
   price: string;
+  pricePrefix?: string;
+  description?: string;
   note?: string;
 };
 
 export const EXTRA_SERVICES: ExtraService[] = [
-  { label: "Refonte de site existant", price: "390 €" },
-  { label: "Fiche Google Business & Google Maps", price: "99 €" },
+  {
+    label: "Refonte de site existant",
+    price: "390 €",
+    pricePrefix: "À partir de",
+    description:
+      "Votre site est daté, lent ou pas responsive ? On le repense entièrement : design moderne, mobile, et plus rapide.",
+  },
+  {
+    label: "Fiche Google Business & Google Maps",
+    price: "99 €",
+    description:
+      "Apparaissez sur Google Maps et dans la recherche locale. Création et optimisation complète de votre fiche.",
+    note: "Inclus dans les abonnements Confort et Croissance web.",
+  },
 ];
 
 // Modifications ponctuelles (pour les clients sans abonnement ou hors forfait)
@@ -161,39 +175,39 @@ export const RECURRING_PLANS: RecurringPlan[] = [
   },
   {
     name: "Hébergement",
-    italic: "& Visibilité locale",
-    tagline: "Recommandé — pour être visible localement",
-    price: "29 €/mois",
+    italic: "& Confort",
+    tagline: "Recommandé — votre présence locale en place, et vos évolutions moins chères",
+    price: "19 €/mois",
     included: [
-      "Hébergement & maintenance",
-      "Google Business Profile",
-      "SEO local de base (optimisation fiche + site)",
-      "1 modification légère / mois",
-      "Monitoring site",
-      "Support standard",
+      "Tout le forfait Sérénité",
+      "Mise en place & optimisation de votre fiche Google Business Profile (Google Maps + recherche)",
+      "Sauvegardes quotidiennes",
+      "Support prioritaire (réponse sous 24 à 48h ouvrées)",
+      "Tarif membre sur toutes les modifications (−50 %)",
+      "Modifications réalisées en priorité",
+      "Bilan de santé du site 2×/an (vitesse, disponibilité, sécurité)",
     ],
+    note: "L'optimisation de la fiche Google est une prestation unique réalisée à la souscription. Tarif membre sur les modifications : texte 5 €, visuelle 10 €, importante 20 €.",
     objective:
-      "Votre entreprise est visible localement sur Google et reste à jour.",
+      "Vous apparaissez sur Google Maps, tout est pris en charge, et chaque évolution de votre site vous revient moins cher.",
     featured: true,
   },
   {
     name: "Hébergement",
     italic: "& Croissance web",
-    tagline: "Recommandé — pour attirer plus de clients",
-    price: "59 €/mois",
+    tagline: "Pour être trouvé sur Google et attirer plus de clients",
+    price: "49 €/mois",
     included: [
-      "Hébergement & maintenance du site",
-      "Google Business Profile (optimisation et suivi)",
-      "Optimisation SEO avancée du site",
-      "Recherche de mots-clés stratégiques",
+      "Tout le forfait Confort",
+      "Suivi & optimisation continue de votre fiche Google Business Profile",
+      "SEO local : recherche de mots-clés stratégiques",
       "Optimisation des pages pour Google (SEO on-page)",
-      "Création ou amélioration de contenu SEO (pages ou sections)",
+      "Création ou amélioration de contenu SEO",
       "Suivi mensuel des performances (trafic + positionnement)",
-      "Jusqu'à 2 demandes de modifications / mois (textes, images, horaires, ajustements légers de sections)",
-      "Optimisation continue du site (améliorations SEO et structurelles progressives)",
+      "2 modifications légères incluses / mois",
     ],
-    note: "Le service de modifications vise à maintenir et améliorer le site, et non à fonctionner comme un service de développement à la demande illimitée.",
+    note: "Le service de modifications vise à maintenir et améliorer le site, et non à fonctionner comme un service de développement à la demande illimité.",
     objective:
-      "Améliorer votre position Google et attirer plus de clients chaque mois.",
+      "Améliorer votre position sur Google et attirer plus de clients chaque mois.",
   },
 ];

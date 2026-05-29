@@ -21,7 +21,20 @@ export const PROCESS_STEPS: ProcessStep[] = [
     ],
   },
   {
-    number: 2,
+  number: 2,
+  title: "Validation du devis & acompte",
+  duration: "24 à 72 h",
+  description:
+    "Une fois le devis validé, vous signez le contrat et versez l'acompte de démarrage. Cela me permet de réserver votre projet et de commencer la création de votre site.",
+  deliverables: [
+    "Signature du devis / contrat",
+    "Versement de l'acompte",
+    "Planification du projet",
+    "Ouverture du projet",
+  ],
+},
+  {
+    number: 3,
     title: "Maquette sur mesure",
     duration: "3 à 5 jours",
     description:
@@ -33,7 +46,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     ],
   },
   {
-    number: 3,
+    number: 4,
     title: "Validation",
     duration: "selon vos retours",
     description:
@@ -45,7 +58,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     ],
   },
   {
-    number: 4,
+    number: 5,
     title: "Abonnement & mise en ligne",
     duration: "",
     description:

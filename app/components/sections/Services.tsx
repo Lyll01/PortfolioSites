@@ -11,6 +11,7 @@ import {
   type Service,
   type RecurringPlan,
   type Modification,
+  type ExtraService,
 } from "@/app/data/services";
 
 const RGPD_INCLUDED = [
@@ -100,19 +101,11 @@ export function Services() {
                 </p>
 
                 {EXTRA_SERVICES.length > 0 && (
-                  <ul className="mt-6 grid grid-cols-1 gap-x-12 gap-y-4 sm:grid-cols-2">
+                  <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
                     {EXTRA_SERVICES.map((s) => (
-                      <li
-                        key={s.label}
-                        className="flex items-baseline justify-between gap-4 border-b border-cream/10 py-3"
-                      >
-                        <span className="text-cream/90">{s.label}</span>
-                        <span className="font-display text-xl text-cream">
-                          à partir de {s.price}
-                        </span>
-                      </li>
+                      <ExtraCard key={s.label} extra={s} />
                     ))}
-                  </ul>
+                  </div>
                 )}
 
                 {MODIFICATIONS.length > 0 && (
@@ -225,6 +218,34 @@ function PartHeader({
       </div>
       <p className="mono-label !text-cream/50 lg:text-right">{note}</p>
     </div>
+  );
+}
+
+function ExtraCard({ extra }: { extra: ExtraService }) {
+  return (
+    <article className="flex h-full flex-col border border-cream/15 p-6 transition-colors hover:border-vermillion/40 lg:p-7">
+      <div className="flex items-start justify-between gap-4 border-b border-cream/10 pb-4">
+        <h5 className="font-display text-xl text-cream lg:text-2xl">
+          {extra.label}
+        </h5>
+        <div className="shrink-0 text-right">
+          {extra.pricePrefix && (
+            <p className="mono-label !text-cream/45">{extra.pricePrefix}</p>
+          )}
+          <p className="font-display text-3xl text-vermillion lg:text-4xl">
+            {extra.price}
+          </p>
+        </div>
+      </div>
+
+      {extra.description && (
+        <p className="mt-4 text-sm text-cream/75">{extra.description}</p>
+      )}
+
+      {extra.note && (
+        <p className="mt-auto pt-4 text-xs italic text-cream/50">{extra.note}</p>
+      )}
+    </article>
   );
 }
 
