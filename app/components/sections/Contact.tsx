@@ -120,8 +120,10 @@ function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    // Honeypot
-    if (fd.get("website")) {
+    // Honeypot — champ caché que seuls les bots remplissent.
+    // On n'inclut PAS de champ nommé "website"/"email"/etc. que les
+    // gestionnaires de mots de passe rempliraient automatiquement.
+    if (fd.get("botcheck")) {
       setState("success");
       return;
     }
@@ -139,8 +141,8 @@ function ContactForm() {
       nextErrors.email = "Cet email ne semble pas valide.";
     if (!type) nextErrors.type = "Sélectionnez un type de projet.";
     if (!message) nextErrors.message = "Décrivez votre besoin en quelques mots.";
-    else if (message.length < 20)
-      nextErrors.message = "Votre message est un peu court (20 caractères min.).";
+    else if (message.length < 10)
+      nextErrors.message = "Votre message est un peu court (10 caractères min.).";
 
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
@@ -204,10 +206,10 @@ function ContactForm() {
       className="flex flex-col gap-7 bg-cream border border-ink/10 p-8 lg:p-12"
       noValidate
     >
-      {/* Honeypot */}
+      {/* Honeypot — checkbox cachée native Web3Forms (ignorée par l'autofill) */}
       <input
-        type="text"
-        name="website"
+        type="checkbox"
+        name="botcheck"
         tabIndex={-1}
         autoComplete="off"
         className="absolute -left-[9999px] h-0 w-0 opacity-0"
