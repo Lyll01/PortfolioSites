@@ -181,7 +181,6 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     included: [
       "Tout le forfait Sérénité",
       "Mise en place & optimisation de votre fiche Google Business Profile (Google Maps + recherche)",
-      "Sauvegardes quotidiennes",
       "Support prioritaire (réponse sous 24 à 48h ouvrées)",
       "Tarif membre sur toutes les modifications (−50 %)",
       "Modifications réalisées en priorité",
@@ -200,9 +199,9 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     included: [
       "Tout le forfait Confort",
       "Suivi & optimisation continue de votre fiche Google Business Profile",
-      "SEO local : recherche de mots-clés stratégiques",
-      "Optimisation des pages pour Google (SEO on-page)",
-      "Création ou amélioration de contenu SEO",
+      "Référencement local : recherche de mots-clés stratégiques",
+      "Optimisation des pages pour Google (Référencement on-page)",
+      "Création ou amélioration de contenu Référencement",
       "Suivi mensuel des performances (trafic + positionnement)",
       "2 modifications légères incluses / mois",
     ],

@@ -5,16 +5,15 @@ import { Wordmark } from "../ui/Wordmark";
 import { NAV_LINKS, SOCIAL_LINKS, STUDIO } from "@/app/data/navigation";
 
 const OFFERS = [
-  { label: "Création de sites", href: "#services" },
-  { label: "Refonte", href: "#services" },
-  { label: "Référencement SEO", href: "#services" },
-  { label: "Maintenance", href: "#services" },
+  { label: "Création de sites", href: "#offre-creation" },
+  { label: "Refonte", href: "#offre-refonte" },
+  { label: "Référencement Référencement", href: "#offre-Référencement" },
+  { label: "Maintenance", href: "#offre-maintenance" },
 ];
 
 const LEGAL = [
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "Confidentialité", href: "/confidentialite" },
-  { label: "Plan du site", href: "/sitemap.xml" },
 ];
 
 export function Footer() {
@@ -26,9 +25,15 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 py-20 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-24">
           {/* Branding */}
           <div className="lg:col-span-4">
-            <Wordmark size="lg" variant="light" as="p" />
+            <a
+              href="#top"
+              aria-label="Retour en haut de page"
+              className="inline-block transition-opacity hover:opacity-80"
+            >
+              <Wordmark size="lg" variant="light" />
+            </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/70">
-              Studio web indépendant — sites sur-mesure et SEO pour TPE,
+              Studio web indépendant — sites sur-mesure et Référencement pour TPE,
               indépendants et associations.
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-wider text-cream/50">

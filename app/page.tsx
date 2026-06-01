@@ -47,7 +47,7 @@ export default function HomePage() {
             slogan: "Prix bas, qualité, rapidité, proximité.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
-              name: "Création de sites web & SEO",
+              name: "Création de sites web & Référencement",
               itemListElement: [
                 {
                   "@type": "Offer",
@@ -59,12 +59,6 @@ export default function HomePage() {
                   "@type": "Offer",
                   name: "Pack Business — Jusqu'à 5 pages",
                   price: "690",
-                  priceCurrency: "EUR",
-                },
-                {
-                  "@type": "Offer",
-                  name: "Pack Pro — Jusqu'à 10 pages",
-                  price: "990",
                   priceCurrency: "EUR",
                 },
               ],

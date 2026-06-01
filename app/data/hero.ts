@@ -1,7 +1,7 @@
 export const HERO_SPECIALTIES = [
   "Création de sites",
   "Refonte",
-  "SEO local",
+  "Référencement local",
   "Performance",
   "Design éditorial",
   "Maintenance",

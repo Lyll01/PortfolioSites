@@ -10,7 +10,7 @@ const sizes = {
   md: "text-2xl",
   lg: "text-4xl lg:text-5xl",
   xl: "text-5xl sm:text-7xl lg:text-8xl",
-  hero: "text-[15vw] sm:text-[14vw] lg:text-[13vw] xl:text-[190px] break-words",
+  hero: "whitespace-nowrap text-[clamp(2rem,12.5vw,190px)]",
 };
 
 export function Wordmark({

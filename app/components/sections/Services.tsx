@@ -43,7 +43,7 @@ export function Services() {
         {/* =========================================================== */}
         {/* PARTIE 01 — CRÉATION DU SITE (one-shot)                     */}
         {/* =========================================================== */}
-        <div className="mt-20 lg:mt-28">
+        <div id="offre-creation" className="mt-20 scroll-mt-20 lg:mt-28">
           <Reveal>
             <PartHeader
               step="01"
@@ -95,7 +95,10 @@ export function Services() {
           {/* Extras à la carte */}
           {(EXTRA_SERVICES.length > 0 || MODIFICATIONS.length > 0) && (
             <Reveal>
-              <div className="mt-12 border-t border-cream/15 pt-10 lg:mt-16">
+              <div
+                id="offre-refonte"
+                className="mt-12 scroll-mt-20 border-t border-cream/15 pt-10 lg:mt-16"
+              >
                 <p className="mono-label !text-cream/50">
                   AUSSI DISPONIBLES — À LA CARTE
                 </p>
@@ -148,7 +151,7 @@ export function Services() {
             </p>
             <p className="font-display mt-3 max-w-xl text-2xl text-cream lg:text-3xl">
               Un site sans hébergement n&apos;existe pas.{" "}
-              <em className="italic-display">Sans SEO, personne ne le voit.</em>
+              <em className="italic-display">Sans Référencement, personne ne le voit.</em>
             </p>
           </div>
         </Reveal>
@@ -156,7 +159,7 @@ export function Services() {
         {/* =========================================================== */}
         {/* PARTIE 02 — HÉBERGEMENT MENSUEL (abonnement)                */}
         {/* =========================================================== */}
-        <div className="mt-16 lg:mt-20">
+        <div id="offre-maintenance" className="mt-16 scroll-mt-20 lg:mt-20">
           <Reveal>
             <PartHeader
               step="02"
@@ -166,7 +169,10 @@ export function Services() {
             />
           </Reveal>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:max-w-6xl">
+          <div
+            id="offre-Référencement"
+            className="mt-12 grid scroll-mt-20 grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:max-w-6xl"
+          >
             {RECURRING_PLANS.map((plan, i) => (
               <Reveal key={plan.italic} delay={i * 100}>
                 <RecurringCard plan={plan} />

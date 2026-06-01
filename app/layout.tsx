@@ -37,7 +37,7 @@ const instrument = Instrument_Serif({
 const SITE_URL = "https://atelierwebfrance.fr";
 const SITE_NAME = "atelierwebfrance";
 const SITE_TITLE =
-  "atelierwebfrance — Création de sites web & Référencement SEO local";
+  "atelierwebfrance — Création de sites web & Référencement Référencement local";
 const SITE_DESCRIPTION =
   "Studio web indépendant à Toulouse : création de sites web sur-mesure et référencement Google local. Prix bas, qualité, rapidité, proximité. Devis gratuit.";
 
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     "site web sur-mesure",
     "freelance web Toulouse",
     "référencement Google",
-    "SEO local",
+    "Référencement local",
     "fiche Google Business",
     "site vitrine TPE",
     "site PME",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description:
-      "Sites web sur-mesure et SEO local. Prix bas, qualité, rapidité, proximité.",
+      "Sites web sur-mesure et Référencement local. Prix bas, qualité, rapidité, proximité.",
   },
   robots: {
     index: true,

@@ -5,7 +5,7 @@ export type Stat = {
 
 export const STATS: Stat[] = [
   { value: "+5", label: "sites livrés depuis 2025" },
-  { value: "+600%", label: "trafic SEO moyen après 6 mois" },
+  { value: "+600%", label: "trafic Référencement moyen après 6 mois" },
   { value: "< 48h", label: "temps de réponse moyen" },
 ];
 

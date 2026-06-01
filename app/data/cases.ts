@@ -24,11 +24,11 @@ export const CASES: Case[] = [
     client: "Festival Belfield",
     sector: "Association culturelle",
     year: "2025",
-    title: "Création site et SEO",
+    title: "Création site et Référencement",
     italic: "local",
     description:
       "Un festival qui n'avait pas de site web a vu sa visibilité et sa crédibilité grandir grâce à un site sur-mesure dans leur univers, et un référencement dans toute la région pour attirer de nouveaux festivaliers.",
-    services: ["Pack Buisness", "SEO local", "Option: Newsletter"],
+    services: ["Pack Buisness", "Référencement local", "Option: Newsletter"],
     results: [
   {
     label: "Visites du site",
@@ -57,8 +57,8 @@ export const CASES: Case[] = [
     title: "Site vitrine",
     italic: "Google Business",
     description:
-      "Une artisane qui voulait sortir des annuaires. Site simple, rapide, design soigné, et un travail SEO local autour de Toulouse pour transformer chaque recherche en appel.",
-    services: ["Pack Starter", "SEO local", "Google Business"],
+      "Une artisane qui voulait sortir des annuaires. Site simple, rapide, design soigné, et un travail Référencement local autour de Toulouse pour transformer chaque recherche en appel.",
+    services: ["Pack Starter", "Référencement local", "Google Business"],
     results: [
   {
     label: "Nouveau clients",

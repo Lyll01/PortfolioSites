@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 type Props = {
   items: ReactNode[];
   speed?: "normal" | "slow";
-  pauseOnHover?: boolean;
+  pauRéférencementnHover?: boolean;
   className?: string;
   separator?: ReactNode;
   ariaLabel?: string;
@@ -12,7 +12,7 @@ type Props = {
 export function Marquee({
   items,
   speed = "normal",
-  pauseOnHover = true,
+  pauRéférencementnHover = true,
   className = "",
   separator = <span className="mx-8 text-ash/40">·</span>,
   ariaLabel = "Défilement",
@@ -37,7 +37,7 @@ export function Marquee({
 
   return (
     <div
-      className={`relative overflow-hidden ${pauseOnHover ? "marquee-pause" : ""} ${className}`}
+      className={`relative overflow-hidden ${pauRéférencementnHover ? "marquee-pause" : ""} ${className}`}
       role="region"
       aria-label={ariaLabel}
     >
