@@ -114,7 +114,7 @@ export function Header() {
             </ul>
 
             <div className="hidden lg:block">
-              <Button href="#contact" variant="primary" size="sm">
+              <Button href="/#contact" variant="primary" size="sm">
                 Discuter →
               </Button>
             </div>
@@ -181,7 +181,7 @@ export function Header() {
 
             <div className="pb-12">
               <Button
-                href="#contact"
+                href="/#contact"
                 variant="primary"
                 size="lg"
                 className="w-full"

@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { Wordmark } from "../ui/Wordmark";
-import { NAV_LINKS, SOCIAL_LINKS, STUDIO } from "@/app/data/navigation";
+import { NAV_LINKS, STUDIO } from "@/app/data/navigation";
 
 const OFFERS = [
-  { label: "Création de sites", href: "#offre-creation" },
-  { label: "Refonte", href: "#offre-refonte" },
-  { label: "Référencement Référencement", href: "#offre-Référencement" },
-  { label: "Maintenance", href: "#offre-maintenance" },
+  { label: "Création de sites", href: "/#offre-creation" },
+  { label: "Refonte", href: "/#offre-refonte" },
+  { label: "Référencement Référencement", href: "/#offre-Référencement" },
+  { label: "Maintenance", href: "/#offre-maintenance" },
 ];
 
 const LEGAL = [
@@ -26,7 +26,7 @@ export function Footer() {
           {/* Branding */}
           <div className="lg:col-span-4">
             <a
-              href="#top"
+              href="/#top"
               aria-label="Retour en haut de page"
               className="inline-block transition-opacity hover:opacity-80"
             >
@@ -98,7 +98,7 @@ export function Footer() {
             </ul>
 
             <div className="mt-8">
-              <Button href="#contact" variant="primary" size="sm">
+              <Button href="/#contact" variant="primary" size="sm">
                 Prendre RDV →
               </Button>
             </div>

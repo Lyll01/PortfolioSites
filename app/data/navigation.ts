@@ -5,11 +5,11 @@ export type NavLink = {
 };
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Services", href: "#services", id: "services" },
-  { label: "Réalisations", href: "#realisations", id: "realisations" },
-  { label: "Process", href: "#process", id: "process" },
-  { label: "Témoignages", href: "#temoignages", id: "temoignages" },
-  { label: "Contact", href: "#contact", id: "contact" },
+  { label: "Services", href: "/#services", id: "services" },
+  { label: "Réalisations", href: "/#realisations", id: "realisations" },
+  { label: "Process", href: "/#process", id: "process" },
+  { label: "Témoignages", href: "/#temoignages", id: "temoignages" },
+  { label: "Contact", href: "/#contact", id: "contact" },
 ];
 
 export const SOCIAL_LINKS = [
