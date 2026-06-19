@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Check, Mail, Phone, MapPin } from "lucide-react";
+import { Check, Mail, MapPin } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Eyebrow } from "../ui/Eyebrow";
 import { Reveal } from "../ui/Reveal";
@@ -55,17 +55,6 @@ export function Contact() {
                     <Mail size={16} strokeWidth={1.5} />
                     {STUDIO.email}
                   </a>
-                </li>
-                <li>
-                  <p className="mono-label">Téléphone</p>
-                  <a
-                    href={`tel:${STUDIO.phone.replace(/\s/g, "")}`}
-                    className="mt-2 inline-flex items-center gap-2 text-ink hover:text-vermillion"
-                  >
-                    <Phone size={16} strokeWidth={1.5} />
-                    {STUDIO.phone}
-                  </a>
-                  <p className="mt-1 text-xs text-ash">lun-ven · 9h-18h</p>
                 </li>
                 <li>
                   <p className="mono-label">Basé à</p>

@@ -35,7 +35,6 @@ export default function HomePage() {
             description:
               "Studio web indépendant à Toulouse — création de sites web sur-mesure et référencement Google pour TPE, indépendants et associations.",
             url: STUDIO.url,
-            telephone: STUDIO.phone,
             email: STUDIO.email,
             address: {
               "@type": "PostalAddress",

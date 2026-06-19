@@ -31,17 +31,16 @@ export default function MentionsLegalesPage() {
             </p>
             <ul className="space-y-1">
               <li>
-                <strong>[À COMPLÉTER — Prénom NOM]</strong>, entrepreneur
+                <strong>{STUDIO.displayName}</strong>, entrepreneur
                 individuel (micro-entreprise)
               </li>
-              <li>Nom commercial : {STUDIO.displayName}</li>
-              <li>Adresse : [À COMPLÉTER — adresse complète]</li>
+              <li>Adresse : Toulouse</li>
               <li>
-                SIREN / SIRET : [À COMPLÉTER — numéro SIREN à 9 chiffres]
+                SIREN : 106563802
               </li>
               <li>
-                Code APE : [À COMPLÉTER — ex. 6201Z, programmation
-                informatique]
+                Code APE : 6201Z, programmation
+                informatique
               </li>
               <li>
                 Email :{" "}
@@ -52,7 +51,6 @@ export default function MentionsLegalesPage() {
                   {STUDIO.email}
                 </a>
               </li>
-              <li>Téléphone : {STUDIO.phone}</li>
             </ul>
             <p>
               TVA non applicable, article 293 B du Code général des impôts
@@ -61,23 +59,23 @@ export default function MentionsLegalesPage() {
           </LegalBlock>
 
           <LegalBlock title="Directeur de la publication">
-            <p>[À COMPLÉTER — Prénom NOM], en qualité d&apos;éditeur du site.</p>
+            <p>{STUDIO.displayName}, en qualité d&apos;éditeur du site.</p>
           </LegalBlock>
 
           <LegalBlock title="Hébergement">
             <p>Le site est hébergé par :</p>
             <ul className="space-y-1">
-              <li>Vercel Inc.</li>
-              <li>340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</li>
+              <li>GitHub, Inc.</li>
+              <li>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</li>
               <li>
                 Site web :{" "}
                 <a
-                  href="https://vercel.com"
+                  href="https://pages.github.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-vermillion hover:underline"
                 >
-                  vercel.com
+                  pages.github.com
                 </a>
               </li>
             </ul>

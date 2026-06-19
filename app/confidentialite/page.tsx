@@ -37,8 +37,7 @@ export default function ConfidentialitePage() {
 
           <LegalBlock title="Responsable du traitement">
             <p>
-              Le responsable du traitement des données est [À COMPLÉTER —
-              Prénom NOM], entrepreneur individuel.
+              Le responsable du traitement des données est {STUDIO.displayName}, entrepreneur individuel.
             </p>
             <p>
               Pour toute question relative à vos données, vous pouvez écrire à :{" "}
@@ -90,14 +89,10 @@ export default function ConfidentialitePage() {
                 jusqu&apos;à notre boîte email.
               </li>
               <li>
-                <strong>Vercel Inc.</strong> — hébergement du site et journaux
-                techniques.
+                <strong>GitHub, Inc.</strong> — hébergement du site 
               </li>
               <li>
-                <strong>[À COMPLÉTER — outil d&apos;analytics utilisé]</strong>{" "}
-                — mesure d&apos;audience (ex. Google Analytics, Plausible,
-                Vercel Analytics). Précisez l&apos;outil réellement installé et
-                supprimez cette mention s&apos;il n&apos;y en a aucun.
+                <strong>Google analytics</strong> - Outil d'analyse d'actions utilisateur.
               </li>
             </ul>
             <p>

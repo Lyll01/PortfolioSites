@@ -14,6 +14,7 @@ const OFFERS = [
 const LEGAL = [
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "Confidentialité", href: "/confidentialite" },
+  { label: "CGV", href: "/cgv" },
 ];
 
 export function Footer() {
@@ -85,14 +86,6 @@ export function Footer() {
                   className="text-cream transition-colors hover:text-vermillion"
                 >
                   {STUDIO.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${STUDIO.phone.replace(/\s/g, "")}`}
-                  className="text-cream/80 transition-colors hover:text-vermillion"
-                >
-                  {STUDIO.phone}
                 </a>
               </li>
             </ul>

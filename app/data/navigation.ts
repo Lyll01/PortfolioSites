@@ -36,7 +36,6 @@ export const STUDIO = {
   domain: "atelierwebfrance.fr",
   url: "https://atelierwebfrance.fr",
   email: "contact@atelierwebfrance.fr",
-  phone: "+33 X XX XX XX XX",
   city: "Toulouse",
   region: "France",
 };

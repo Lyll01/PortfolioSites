@@ -179,7 +179,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     tagline: "Recommandé — votre présence locale en place, et vos évolutions moins chères",
     price: "19 €/mois",
     included: [
-      "Tout le forfait Sérénité",
+      "Tout le forfait hébergement simple",
       "Mise en place & optimisation de votre fiche Google Business Profile (Google Maps + recherche)",
       "Support prioritaire (réponse sous 24 à 48h ouvrées)",
       "Tarif membre sur toutes les modifications (−50 %)",
