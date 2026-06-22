@@ -61,5 +61,11 @@ specs/
 .specify/
 SPECKIT_GUIDE.md
 
+# --- ARTEFACTS SPECKIT / GITHUB COPILOT ---
+# Agents, prompts et instructions générés localement par les outils IA
+.github/agents/
+.github/prompts/
+.github/copilot-instructions.md
+
 # --- CACHE TYPESCRIPT ---
 tsconfig.tsbuildinfo

@@ -151,7 +151,7 @@ export function Services() {
             </p>
             <p className="font-display mt-3 max-w-xl text-2xl text-cream lg:text-3xl">
               Un site sans hébergement n&apos;existe pas.{" "}
-              <em className="italic-display">Sans Référencement, personne ne le voit.</em>
+              <em className="italic-display">Sans référencement, personne ne le voit.</em>
             </p>
           </div>
         </Reveal>
@@ -170,7 +170,7 @@ export function Services() {
           </Reveal>
 
           <div
-            id="offre-Référencement"
+            id="offre-referencement"
             className="mt-12 grid scroll-mt-20 grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:max-w-6xl"
           >
             {RECURRING_PLANS.map((plan, i) => (

@@ -7,7 +7,7 @@ import { NAV_LINKS, STUDIO } from "@/app/data/navigation";
 const OFFERS = [
   { label: "Création de sites", href: "/#offre-creation" },
   { label: "Refonte", href: "/#offre-refonte" },
-  { label: "Référencement Référencement", href: "/#offre-Référencement" },
+  { label: "Référencement local", href: "/#offre-referencement" },
   { label: "Maintenance", href: "/#offre-maintenance" },
 ];
 
@@ -34,11 +34,12 @@ export function Footer() {
               <Wordmark size="lg" variant="light" />
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/70">
-              Studio web indépendant — sites sur-mesure et Référencement pour TPE,
-              indépendants et associations.
+              Studio web indépendant — création de sites internet pro, pas chers
+              et sur-mesure, et référencement Google pour TPE, PME, indépendants
+              et associations.
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-wider text-cream/50">
-              {STUDIO.city} · {STUDIO.region} · Travaille partout en France
+              {STUDIO.city} et alentours · Travaille partout en France
             </p>
           </div>
 
@@ -107,8 +108,9 @@ export function Footer() {
             className="select-none"
           />
           <p className="mt-6 max-w-md font-mono text-xs uppercase tracking-wider text-cream/40">
-            Le studio web indépendant, basé à {STUDIO.city}, qui travaille
-            pour les TPE et indépendants partout en France.
+            Le studio web indépendant, basé à {STUDIO.city} et alentours, qui
+            crée des sites internet pas chers et sur-mesure pour les TPE, PME,
+            indépendants et associations, partout en France.
           </p>
         </div>
 

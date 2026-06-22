@@ -37,9 +37,9 @@ const instrument = Instrument_Serif({
 const SITE_URL = "https://atelierwebfrance.fr";
 const SITE_NAME = "atelierwebfrance";
 const SITE_TITLE =
-  "atelierwebfrance — Création de sites web & Référencement Référencement local";
+  "Création de site internet pro pas cher sur-mesure à Toulouse et alentours";
 const SITE_DESCRIPTION =
-  "Studio web indépendant à Toulouse : création de sites web sur-mesure et référencement Google local. Prix bas, qualité, rapidité, proximité. Devis gratuit.";
+  "Site internet professionnel sur-mesure et pas cher pour TPE, PME, indépendants et associations. À partir de 349 €, livraison rapide. Toulouse et alentours. Devis gratuit.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -49,23 +49,37 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "création site web",
-    "site internet pas cher",
-    "site web sur-mesure",
-    "freelance web Toulouse",
-    "référencement Google",
-    "Référencement local",
-    "fiche Google Business",
-    "site vitrine TPE",
-    "site PME",
-    "refonte site web",
-    "atelier web France",
+    "création site internet pas cher",
+    "site web professionnel sur-mesure",
+    "site internet pas cher Toulouse",
+    "création site web Montauban",
+    "site internet Caussade",
+    "site pro pas cher TPE",
+    "site web PME",
+    "site internet association",
+    "site vitrine indépendant",
+    "freelance création site web Toulouse",
+    "livraison rapide site web",
+    "référencement Google local",
+    "fiche Google Business Toulouse",
+    "refonte site web pas cher",
+    "création site internet Occitanie",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   alternates: {
     canonical: SITE_URL,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon-180.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     type: "website",
@@ -74,13 +88,22 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description:
-      "Sites web sur-mesure et référencement Google pour TPE, indépendants et associations. Prix accessibles, livraison rapide, accompagnement humain.",
+      "Site internet pro pas cher et sur-mesure pour TPE, PME, indépendants et associations. À partir de 349 €, livraison rapide. Toulouse et alentours.",
+    images: [
+      {
+        url: "/favicon-512.png",
+        width: 512,
+        height: 512,
+        alt: "Logo atelierwebfrance",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description:
-      "Sites web sur-mesure et Référencement local. Prix bas, qualité, rapidité, proximité.",
+      "Site internet pro pas cher et sur-mesure. À partir de 349 €, livraison rapide. Toulouse et alentours.",
+    images: ["/favicon-512.png"],
   },
   robots: {
     index: true,

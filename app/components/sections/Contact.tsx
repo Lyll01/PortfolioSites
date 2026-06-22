@@ -60,10 +60,10 @@ export function Contact() {
                   <p className="mono-label">Basé à</p>
                   <p className="mt-2 inline-flex items-center gap-2 text-ink">
                     <MapPin size={16} strokeWidth={1.5} />
-                    {STUDIO.city}, {STUDIO.region}
+                    {STUDIO.city}, {STUDIO.country}
                   </p>
                   <p className="mt-1 text-xs text-ash">
-                    Rendez-vous en visio par défaut
+                    Déplacement possible à Toulouse et alentours · sinon en visio
                   </p>
                 </li>
               </ul>

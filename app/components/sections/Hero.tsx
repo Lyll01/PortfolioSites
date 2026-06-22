@@ -36,9 +36,9 @@ export function Hero() {
 
             <Reveal delay={120}>
               <h1 className="display mt-8 text-5xl text-ink sm:text-6xl lg:text-[88px] xl:text-[104px]">
-                Sites web{" "}
-                <em className="italic-display text-ink/95">sur-mesure</em> et
-                référencement qui amène{" "}
+                Site internet pro,{" "}
+                <em className="italic-display text-ink/95">pas cher</em> et
+                sur-mesure qui amène{" "}
                 <span className="relative inline-block">
                   vraiment
                   <span
@@ -70,8 +70,10 @@ export function Hero() {
 
             <Reveal delay={400}>
               <p className="mt-8 max-w-[560px] text-lg leading-relaxed text-ink-soft md:text-xl">
-                Conception, design, développement et référencement pour ceux qui veulent
-                un site dont ils sont fiers.
+                Conception, design, développement et référencement Google pour
+                ceux qui veulent un site dont ils sont fiers — à prix accessible
+                et livré rapidement. Basé à Toulouse et disponible dans les
+                alentours.
               </p>
             </Reveal>
 
@@ -94,7 +96,13 @@ export function Hero() {
                 <div>
                   <dt className="mono-label">Basé à</dt>
                   <dd className="mt-2 text-sm text-ink">
-                    {STUDIO.city}, {STUDIO.region}
+                    {STUDIO.city}, {STUDIO.country}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="mono-label">Déplacements</dt>
+                  <dd className="mt-2 text-sm text-ink">
+                    Toulouse et alentours
                   </dd>
                 </div>
                 <div>

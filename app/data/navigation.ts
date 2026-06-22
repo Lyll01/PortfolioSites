@@ -37,5 +37,9 @@ export const STUDIO = {
   url: "https://atelierwebfrance.fr",
   email: "contact@atelierwebfrance.fr",
   city: "Toulouse",
-  region: "France",
+  region: "Occitanie",
+  country: "France",
+  // Zones d'intervention pour le SEO local (déplacements possibles pour entretiens).
+  serviceAreas: ["Toulouse", "Montauban", "Caussade", "Occitanie"],
+  serviceAreaLabel: "Toulouse, Montauban, Caussade et alentours",
 };

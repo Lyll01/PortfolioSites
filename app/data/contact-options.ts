@@ -24,8 +24,8 @@ export const PROJECT_TYPES: SelectItem[] = [
     label: "Abonnement mensuel",
     options: [
       { value: "hebergement-simple", label: "Hébergement simple — 9 €/mois" },
-      { value: "hebergement-Référencement-local", label: "Hébergement & Référencement local — 29 €/mois" },
-      { value: "hebergement-Référencement-pro", label: "Hébergement & Référencement PRO — 59 €/mois" },
+      { value: "hebergement-confort", label: "Hébergement & Confort — 19 €/mois" },
+      { value: "hebergement-croissance", label: "Hébergement & Croissance web — 49 €/mois" },
     ],
   },
   { value: "autre", label: "Autre / je ne sais pas encore" },
