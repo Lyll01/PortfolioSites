@@ -36,7 +36,5 @@ export const BUDGETS: SelectItem[] = [
   { value: "lt500", label: "Moins de 500 €" },
   { value: "500-1000", label: "500 € – 1 000 €" },
   { value: "1000-2500", label: "1 000 € – 2 500 €" },
-  { value: "2500-5000", label: "2 500 € – 5 000 €" },
-  { value: "gt5000", label: "Plus de 5 000 €" },
   { value: "mensuel", label: "Abonnement mensuel uniquement" },
 ];
