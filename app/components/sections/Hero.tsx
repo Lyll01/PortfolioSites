@@ -72,8 +72,7 @@ export function Hero() {
               <p className="mt-8 max-w-[560px] text-lg leading-relaxed text-ink-soft md:text-xl">
                 Conception, design, développement et référencement Google pour
                 ceux qui veulent un site dont ils sont fiers — à prix accessible
-                et livré rapidement. Basé à Toulouse et disponible dans les
-                alentours.
+                et livré rapidement.
               </p>
             </Reveal>
 
