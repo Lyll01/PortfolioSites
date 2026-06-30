@@ -24,7 +24,7 @@ export const SERVICES: Service[] = [
       "Sections : présentation, services, zone d'intervention",
       "Design responsive (mobile, tablette, desktop)",
     ],
-    price: "349 €",
+    price: "389 €",
     delay: "Livraison rapide",
   },
   {
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
       "Formulaire de contact complet",
       "Optimisation mobile avancée",
     ],
-    price: "649 €",
+    price: "749 €",
     delay: "1 à 3 semaines",
     featured: true,
   },
