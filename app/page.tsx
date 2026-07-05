@@ -85,7 +85,7 @@ export default function HomePage() {
                   name: "Pack Starter — Site one-page sur-mesure",
                   description:
                     "Site internet pro pas cher, livré rapidement, pour auto-entrepreneurs et indépendants.",
-                  price: "349",
+                  price: "389",
                   priceCurrency: "EUR",
                 },
                 {
@@ -93,7 +93,7 @@ export default function HomePage() {
                   name: "Pack Business — Site multi-pages (4 à 6 pages)",
                   description:
                     "Site vitrine sur-mesure pour TPE, artisans, associations et restaurants qui veulent des clients locaux.",
-                  price: "649",
+                  price: "749",
                   priceCurrency: "EUR",
                 },
                 {
@@ -110,7 +110,7 @@ export default function HomePage() {
               priceSpecification: {
                 "@type": "PriceSpecification",
                 priceCurrency: "EUR",
-                minPrice: "349",
+                minPrice: "389",
               },
             },
           }),
@@ -131,7 +131,7 @@ export default function HomePage() {
                 name: "Combien coûte la création d'un site internet professionnel ?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "La création d'un site internet pro et sur-mesure commence à 349 € pour un site one-page, et 649 € pour un site vitrine de 4 à 6 pages. Les projets spécifiques sont sur devis gratuit. Des prix volontairement bas et transparents, sans engagement.",
+                  text: "La création d'un site internet pro et sur-mesure commence à 389 € pour un site one-page, et 749 € pour un site vitrine de 4 à 6 pages. Les projets spécifiques sont sur devis gratuit. Des prix volontairement bas et transparents, sans engagement.",
                 },
               },
               {

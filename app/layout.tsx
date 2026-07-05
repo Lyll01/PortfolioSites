@@ -39,7 +39,7 @@ const SITE_NAME = "atelierwebfrance";
 const SITE_TITLE =
   "Création de site internet pro pas cher sur-mesure à Toulouse et alentours";
 const SITE_DESCRIPTION =
-  "Site internet professionnel sur-mesure et pas cher pour TPE, PME, indépendants et associations. À partir de 349 €, livraison rapide. Toulouse et alentours. Devis gratuit.";
+  "Site internet professionnel sur-mesure et pas cher pour TPE, PME, indépendants et associations. À partir de 389 €, livraison rapide. Toulouse et alentours. Devis gratuit.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description:
-      "Site internet pro pas cher et sur-mesure pour TPE, PME, indépendants et associations. À partir de 349 €, livraison rapide. Toulouse et alentours.",
+      "Site internet pro pas cher et sur-mesure pour TPE, PME, indépendants et associations. À partir de 389 €, livraison rapide. Toulouse et alentours.",
     images: [
       {
         url: "/favicon-512.png",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description:
-      "Site internet pro pas cher et sur-mesure. À partir de 349 €, livraison rapide. Toulouse et alentours.",
+      "Site internet pro pas cher et sur-mesure. À partir de 389 €, livraison rapide. Toulouse et alentours.",
     images: ["/favicon-512.png"],
   },
   robots: {

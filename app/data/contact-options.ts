@@ -7,8 +7,8 @@ export const PROJECT_TYPES: SelectItem[] = [
   {
     label: "Création de site",
     options: [
-      { value: "starter", label: "Pack Starter — 349 €" },
-      { value: "business", label: "Pack Business — 649 €" },
+      { value: "starter", label: "Pack Starter — 389 €" },
+      { value: "business", label: "Pack Business — 749 €" },
       { value: "sur-mesure", label: "Pack Sur mesure — sur devis" },
     ],
   },

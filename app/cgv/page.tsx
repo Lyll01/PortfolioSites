@@ -70,7 +70,7 @@ export default function CgvPage() {
             <p>
               Les prestations et leurs tarifs sont détaillés dans les offres en
               vigueur du Prestataire : formules de création de site (Starter
-              349&nbsp;€, Business 649&nbsp;€, ou Sur mesure), abonnements
+              389&nbsp;€, Business 749&nbsp;€, ou Sur mesure), abonnements
               mensuels (Hébergement simple 9&nbsp;€, Hébergement &amp; Confort
               19&nbsp;€, Hébergement &amp; Croissance web 49&nbsp;€), prestations
               complémentaires et grille de modifications. Les prix sont indiqués
