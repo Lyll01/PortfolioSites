@@ -219,6 +219,7 @@ function ContactForm() {
         type="email"
         error={errors.email}
       />
+      
       <Field id="company" label="Entreprise / Association" type="text" />
 
       <Select
