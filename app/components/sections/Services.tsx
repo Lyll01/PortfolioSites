@@ -1,4 +1,4 @@
-import { ShieldCheck, Check, X, ArrowDown } from "lucide-react";
+import { ShieldCheck, Check, X, ArrowDown, ServerCog } from "lucide-react";
 import { Container } from "../ui/Container";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
@@ -13,6 +13,13 @@ import {
   type Modification,
   type ExtraService,
 } from "@/app/data/services";
+
+const HOSTING_INCLUDED = [
+  "Hébergement du site offert",
+  "Certificat SSL (HTTPS) offert",
+  "Nom de domaine mis en ligne",
+  "Site publié et visible sur Google",
+];
 
 const RGPD_INCLUDED = [
   "Mentions légales",
@@ -36,7 +43,7 @@ export function Services() {
               <em className="italic-display">on le fait vivre</em>.
             </>
           }
-          intro="Un site vitrine livré clé en main, puis un abonnement mensuel pour l'hébergement et la visibilité. Tarifs transparents, sans engagement."
+          intro="Un site vitrine livré clé en main — hébergement et HTTPS offerts —, puis un abonnement mensuel de référencement pour être trouvé sur Google. Tarifs transparents, sans engagement."
           theme="dark"
         />
 
@@ -62,18 +69,48 @@ export function Services() {
             ))}
           </div>
 
-          {/* RGPD guarantee banner — applies to ALL packs */}
+          {/* Hosting banner — offert avec tous les packs */}
           <Reveal>
             <aside
               className="mt-10 flex flex-col gap-5 border border-vermillion/30 bg-vermillion/5 p-6 lg:mt-12 lg:flex-row lg:items-center lg:gap-8 lg:p-7"
-              aria-label="Inclus dans tous les packs de création"
+              aria-label="Hébergement offert avec tous les packs de création"
             >
               <div className="flex items-center gap-4 lg:shrink-0">
                 <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center border border-vermillion text-vermillion">
-                  <ShieldCheck size={22} strokeWidth={1.5} />
+                  <ServerCog size={22} strokeWidth={1.5} />
                 </span>
                 <div>
                   <p className="mono-label !text-vermillion">
+                    Offert avec tous les packs
+                  </p>
+                  <p className="font-display mt-1 text-xl text-cream lg:text-2xl">
+                    Hébergement &amp; HTTPS inclus
+                  </p>
+                </div>
+              </div>
+              <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-cream/80 lg:ml-auto lg:justify-end">
+                {HOSTING_INCLUDED.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span aria-hidden className="text-vermillion">·</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </Reveal>
+
+          {/* RGPD guarantee banner — applies to ALL packs */}
+          <Reveal>
+            <aside
+              className="mt-6 flex flex-col gap-5 border border-cream/15 p-6 lg:flex-row lg:items-center lg:gap-8 lg:p-7"
+              aria-label="Inclus dans tous les packs de création"
+            >
+              <div className="flex items-center gap-4 lg:shrink-0">
+                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center border border-cream/40 text-cream">
+                  <ShieldCheck size={22} strokeWidth={1.5} />
+                </span>
+                <div>
+                  <p className="mono-label !text-cream/50">
                     Inclus dans tous les packs
                   </p>
                   <p className="font-display mt-1 text-xl text-cream lg:text-2xl">
@@ -84,7 +121,7 @@ export function Services() {
               <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-cream/80 lg:ml-auto lg:justify-end">
                 {RGPD_INCLUDED.map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span aria-hidden className="text-vermillion">·</span>
+                    <span aria-hidden className="text-cream/40">·</span>
                     {item}
                   </li>
                 ))}
@@ -150,21 +187,21 @@ export function Services() {
               FORTEMENT RECOMMANDÉ AVEC LA CRÉATION
             </p>
             <p className="font-display mt-3 max-w-xl text-2xl text-cream lg:text-3xl">
-              Un site sans hébergement n&apos;existe pas.{" "}
-              <em className="italic-display">Sans référencement, personne ne le voit.</em>
+              Votre site est en ligne, hébergé et sécurisé.{" "}
+              <em className="italic-display">Reste à ce qu&apos;on le trouve sur Google.</em>
             </p>
           </div>
         </Reveal>
 
         {/* =========================================================== */}
-        {/* PARTIE 02 — HÉBERGEMENT MENSUEL (abonnement)                */}
+        {/* PARTIE 02 — RÉFÉRENCEMENT MENSUEL (abonnement)              */}
         {/* =========================================================== */}
         <div id="offre-maintenance" className="mt-16 scroll-mt-20 lg:mt-20">
           <Reveal>
             <PartHeader
               step="02"
-              kind="Hébergement mensuel"
-              title="Pour que votre site reste en ligne, rapide et visible."
+              kind="Référencement mensuel"
+              title="Pour que votre site soit trouvé sur Google et attire des clients."
               note="Abonnement mensuel · sans engagement · résiliable à tout moment"
             />
           </Reveal>

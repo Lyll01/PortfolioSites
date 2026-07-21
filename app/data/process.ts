@@ -59,15 +59,15 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     number: 5,
-    title: "Abonnement & mise en ligne",
+    title: "Développement & mise en ligne",
     duration: "",
     description:
-      "Vous choisissez votre formule d'hébergement, je développe et publie votre site. Votre activité est enfin visible sur Google.",
+      "Je développe et publie votre site. L'hébergement et le HTTPS sont offerts. En option, un abonnement de référencement pour être trouvé sur Google.",
     deliverables: [
-      "Sélection de l'abonnement d'hébergement",
       "Développement et intégration responsive",
+      "Hébergement & HTTPS offerts",
       "Mise en ligne sur votre nom de domaine",
-      "Site visible sur Google",
+      "Référencement mensuel en option",
     ],
   },
 ];

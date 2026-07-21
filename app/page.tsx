@@ -72,7 +72,7 @@ export default function HomePage() {
               "Référencement Google local (SEO)",
               "Fiche Google Business Profile",
               "Refonte de site web",
-              "Hébergement et maintenance de site",
+              "Hébergement de site offert",
             ],
             priceRange: "€",
             slogan: "Site pro, pas cher, sur-mesure — livré rapidement.",
@@ -100,7 +100,23 @@ export default function HomePage() {
                   "@type": "Offer",
                   name: "Pack Sur-mesure — Projet spécifique",
                   description:
-                    "Site internet entièrement sur-mesure adapté à votre projet, sur devis gratuit.",
+                    "Site internet entièrement sur-mesure adapté à votre projet, sur devis gratuit. Hébergement et HTTPS offerts.",
+                  priceCurrency: "EUR",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Référencement Confort — Abonnement mensuel",
+                  description:
+                    "Fiche Google Business Profile optimisée, support prioritaire et tarif membre sur les modifications. Hébergement offert.",
+                  price: "15",
+                  priceCurrency: "EUR",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Référencement & Croissance web — Abonnement mensuel",
+                  description:
+                    "Référencement local, SEO on-page, contenu optimisé et suivi mensuel des performances pour attirer plus de clients sur Google.",
+                  price: "39",
                   priceCurrency: "EUR",
                 },
               ],

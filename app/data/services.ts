@@ -89,7 +89,7 @@ export type ExtraService = {
 export const EXTRA_SERVICES: ExtraService[] = [
   {
     label: "Refonte de site existant",
-    price: "390 €",
+    price: "449 €",
     pricePrefix: "À partir de",
     description:
       "Votre site est daté, lent ou pas responsive ? On le repense entièrement : design moderne, mobile, et plus rapide.",
@@ -99,7 +99,7 @@ export const EXTRA_SERVICES: ExtraService[] = [
     price: "99 €",
     description:
       "Apparaissez sur Google Maps et dans la recherche locale. Création et optimisation complète de votre fiche.",
-    note: "Inclus dans les abonnements Confort et Croissance web.",
+    note: "Inclus dans les abonnements de référencement Confort et Croissance web.",
   },
 ];
 
@@ -143,7 +143,7 @@ export const MODIFICATIONS: Modification[] = [
 export const MODIFICATIONS_NOTE =
   "Les demandes complexes ou hors forfait peuvent faire l'objet d'un devis complémentaire.";
 
-// Abonnements mensuels d'hébergement (le 2e temps de l'offre)
+// Abonnements mensuels de référencement (le 2e temps de l'offre)
 export type RecurringPlan = {
   name: string;
   italic: string;
@@ -158,28 +158,11 @@ export type RecurringPlan = {
 
 export const RECURRING_PLANS: RecurringPlan[] = [
   {
-    name: "Hébergement",
-    italic: "simple",
-    tagline: "L'essentiel pour que votre site reste en ligne",
-    price: "9 €/mois",
+    name: "Référencement",
+    italic: "Confort",
+    tagline: "Recommandé — votre présence locale en place sur Google",
+    price: "15 €/mois",
     included: [
-      "Hébergement du site",
-      "Certificat SSL (HTTPS)",
-      "Monitoring de disponibilité (alertes en cas de panne)",
-      "Sauvegarde automatique",
-      "Maintenance technique de base (mise à jour / sécurité)",
-      "Support par email léger",
-    ],
-    objective:
-      "Garantir que votre site est toujours en ligne, rapide et sécurisé.",
-  },
-  {
-    name: "Hébergement",
-    italic: "& Confort",
-    tagline: "Recommandé — votre présence locale en place, et vos évolutions moins chères",
-    price: "19 €/mois",
-    included: [
-      "Tout le forfait hébergement simple",
       "Mise en place & optimisation de votre fiche Google Business Profile (Google Maps + recherche)",
       "Support prioritaire (réponse sous 24 à 48h ouvrées)",
       "Tarif membre sur toutes les modifications (−50 %)",
@@ -188,14 +171,14 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     ],
     note: "L'optimisation de la fiche Google est une prestation unique réalisée à la souscription. Tarif membre sur les modifications : texte 5 €, visuelle 10 €, importante 20 €.",
     objective:
-      "Vous apparaissez sur Google Maps, tout est pris en charge, et chaque évolution de votre site vous revient moins cher.",
+      "Vous apparaissez sur Google Maps, et chaque évolution de votre site vous revient moins cher.",
     featured: true,
   },
   {
-    name: "Hébergement",
+    name: "Référencement",
     italic: "& Croissance web",
     tagline: "Pour être trouvé sur Google et attirer plus de clients",
-    price: "49 €/mois",
+    price: "39 €/mois",
     included: [
       "Tout le forfait Confort",
       "Suivi & optimisation continue de votre fiche Google Business Profile",

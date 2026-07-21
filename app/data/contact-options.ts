@@ -21,11 +21,10 @@ export const PROJECT_TYPES: SelectItem[] = [
     ],
   },
   {
-    label: "Abonnement mensuel",
+    label: "Référencement mensuel",
     options: [
-      { value: "hebergement-simple", label: "Hébergement simple — 9 €/mois" },
-      { value: "hebergement-confort", label: "Hébergement & Confort — 19 €/mois" },
-      { value: "hebergement-croissance", label: "Hébergement & Croissance web — 49 €/mois" },
+      { value: "referencement-confort", label: "Référencement Confort — 15 €/mois" },
+      { value: "referencement-croissance", label: "Référencement & Croissance web — 39 €/mois" },
     ],
   },
   { value: "autre", label: "Autre / je ne sais pas encore" },

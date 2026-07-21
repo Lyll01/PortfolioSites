@@ -70,10 +70,12 @@ export default function CgvPage() {
             <p>
               Les prestations et leurs tarifs sont détaillés dans les offres en
               vigueur du Prestataire : formules de création de site (Starter
-              389&nbsp;€, Business 749&nbsp;€, ou Sur mesure), abonnements
-              mensuels (Hébergement simple 9&nbsp;€, Hébergement &amp; Confort
-              19&nbsp;€, Hébergement &amp; Croissance web 49&nbsp;€), prestations
-              complémentaires et grille de modifications. Les prix sont indiqués
+              389&nbsp;€, Business 749&nbsp;€, ou Sur mesure), incluant
+              l&apos;hébergement et le certificat SSL (HTTPS) sans frais
+              supplémentaire, abonnements mensuels de référencement
+              (Référencement Confort 15&nbsp;€, Référencement &amp; Croissance
+              web 39&nbsp;€), prestations complémentaires et grille de
+              modifications. Les prix sont indiqués
               en euros et susceptibles de révision ; le tarif applicable est
               celui en vigueur à la date de la commande.
             </p>
@@ -142,9 +144,11 @@ export default function CgvPage() {
 
           <LegalBlock title="Article 8 – Durée, engagement et résiliation">
             <p>
-              L&apos;abonnement Hébergement simple est sans engagement. Les
-              abonnements Confort et Croissance web comportent une durée
-              d&apos;engagement minimale de trois (3) mois, courant à compter du
+              L&apos;hébergement fourni avec la création du site est offert
+              pendant la durée de la mise en ligne, sans engagement. Les
+              abonnements de référencement Confort et Croissance web comportent
+              une durée d&apos;engagement minimale de trois (3) mois, courant à
+              compter du
               premier mois complet. À l&apos;issue de la période initiale,
               l&apos;abonnement se reconduit tacitement par mois. Chaque Partie
               peut résilier moyennant un préavis de quinze (15) jours. Le mois
