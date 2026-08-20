@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   CONSENT_EVENT,
   ConsentValue,
-  GA_ID,
+  GTM_ID,
   readConsent,
   readRawConsent,
   saveConsent,
@@ -33,7 +33,7 @@ export function CookieBanner() {
   }, []);
 
   useEffect(() => {
-    if (!GA_ID) return;
+    if (!GTM_ID) return;
 
     const choice = readConsent();
     if (choice === "granted") {
@@ -73,7 +73,7 @@ export function CookieBanner() {
     setVisible(false);
   };
 
-  if (!GA_ID || !visible) return null;
+  if (!GTM_ID || !visible) return null;
 
   return (
     <div

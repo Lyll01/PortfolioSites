@@ -3,7 +3,7 @@ import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { Wordmark } from "../ui/Wordmark";
 import { NAV_LINKS, STUDIO } from "@/app/data/navigation";
-import { GA_ID } from "../analytics/consent";
+import { GTM_ID } from "../analytics/consent";
 
 const OFFERS = [
   { label: "Création de sites", href: "/#offre-creation" },
@@ -132,7 +132,7 @@ export function Footer() {
             ))}
             {/* Retrait du consentement aussi simple que son recueil (CNIL).
                 Masqué si aucun traceur n'est configuré : rien à gérer. */}
-            {GA_ID && (
+            {GTM_ID && (
               <li>
                 <button
                   type="button"

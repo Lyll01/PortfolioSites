@@ -6,7 +6,10 @@ import {
   Instrument_Serif,
 } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from "./components/analytics/GoogleAnalytics";
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoScript,
+} from "./components/analytics/GoogleTagManager";
 import { CookieBanner } from "./components/analytics/CookieBanner";
 
 const fraunces = Fraunces({
@@ -137,11 +140,12 @@ export default function RootLayout({
       className={`${fraunces.variable} ${geist.variable} ${jetbrains.variable} ${instrument.variable}`}
     >
       <body className="grain">
+        <GoogleTagManagerNoScript />
         {children}
         <CookieBanner />
       </body>
-      {/* Consent Mode v2 (denied par défaut) puis gtag.js. */}
-      <GoogleAnalytics />
+      {/* Consent Mode v2 (denied par défaut) puis chargement du conteneur GTM. */}
+      <GoogleTagManager />
     </html>
   );
 }
