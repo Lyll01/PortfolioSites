@@ -23,7 +23,7 @@ export default function CgvPage() {
               Conditions générales de <em className="italic-display">vente</em>
             </>
           }
-          updatedAt="18 juin 2026"
+          updatedAt="20 août 2026"
         >
           <LegalBlock title="Préambule">
             <p>
@@ -239,7 +239,47 @@ export default function CgvPage() {
             </p>
           </LegalBlock>
 
-          <LegalBlock title="Article 15 – Droit applicable et litiges">
+          <LegalBlock title="Article 15 – Formulaire type de rétractation">
+            <p>
+              Pour exercer le droit de rétractation prévu à l&apos;article 14,
+              le Client peut adresser au Prestataire, par email ou par courrier,
+              une déclaration dénuée d&apos;ambiguïté, dont le modèle suit :
+            </p>
+            <blockquote className="border-l-2 border-ink/20 pl-4 text-sm italic">
+              <p>
+                À l&apos;attention de {STUDIO.legalName}, {STUDIO.address} —{" "}
+                {STUDIO.email}
+              </p>
+              <p>
+                Je vous notifie par la présente ma rétractation du contrat
+                portant sur la prestation de services ci-dessous : […]
+              </p>
+              <p>Commandé le : […] — Nom du Client : […] — Adresse : […]</p>
+              <p>Date : […] — Signature (si notification papier) : […]</p>
+            </blockquote>
+          </LegalBlock>
+
+          {/*
+            TODO — MÉDIATION DE LA CONSOMMATION (art. L.612-1 et L.616-1 du Code
+            de la consommation). Obligatoire dès qu'un client est un
+            consommateur. Décommenter et compléter après signature de la
+            convention d'adhésion, et synchroniser avec les mentions légales.
+
+          <LegalBlock title="Article 16 – Médiation de la consommation">
+            <p>
+              Conformément à l&apos;article L.612-1 du Code de la consommation,
+              le Client consommateur peut recourir gratuitement au médiateur de
+              la consommation ci-après, après avoir adressé au Prestataire une
+              réclamation écrite restée sans réponse satisfaisante dans un délai
+              de deux mois :
+            </p>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>NOM_DE_L_ENTITE — ADRESSE_POSTALE — URL_DE_SAISINE</li>
+            </ul>
+          </LegalBlock>
+          */}
+
+          <LegalBlock title="Article 17 – Droit applicable et litiges">
             <p>
               Les présentes CGV sont soumises au droit français. En cas de
               différend, les Parties rechercheront une solution amiable avant

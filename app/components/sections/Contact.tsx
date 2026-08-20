@@ -257,11 +257,25 @@ function ContactForm() {
         {state === "submitting" ? "Envoi en cours…" : "Envoyer le message →"}
       </Button>
 
-      <p className="text-xs leading-relaxed text-ash">
-        En envoyant ce formulaire, vous acceptez que vos données soient
-        utilisées uniquement pour vous répondre. Aucun spam, aucune liste
-        tierce.
-      </p>
+      <details className="text-xs leading-relaxed text-ash">
+        <summary className="cursor-pointer underline underline-offset-2 hover:text-ink">
+          Que deviennent mes données ?
+        </summary>
+        <p className="mt-2">
+          Vos données sont utilisées uniquement pour traiter votre demande et
+          établir un éventuel devis (exécution de mesures précontractuelles,
+          art. 6.1.b du RGPD). Elles transitent par Web3Forms jusqu&apos;à notre
+          boîte email et sont conservées 3 ans après le dernier contact. Aucun
+          spam, aucune liste tierce. Vos droits et le détail du traitement :{" "}
+          <a
+            href="/confidentialite"
+            className="text-vermillion underline underline-offset-2"
+          >
+            politique de confidentialité
+          </a>
+          .
+        </p>
+      </details>
     </form>
   );
 }

@@ -23,7 +23,7 @@ export default function MentionsLegalesPage() {
               Mentions <em className="italic-display">légales</em>
             </>
           }
-          updatedAt="20 mai 2026"
+          updatedAt="20 août 2026"
         >
           <LegalBlock title="Éditeur du site">
             <p>
@@ -31,16 +31,19 @@ export default function MentionsLegalesPage() {
             </p>
             <ul className="space-y-1">
               <li>
-                <strong>{STUDIO.displayName}</strong>, entrepreneur
-                individuel (micro-entreprise)
+                <strong>{STUDIO.legalName}</strong>, entrepreneur individuel
+                (micro-entreprise), exerçant sous le nom commercial{" "}
+                {STUDIO.displayName}
               </li>
-              <li>Adresse : Toulouse</li>
+              <li>Adresse : {STUDIO.address}</li>
               <li>
-                SIREN : 106563802
-              </li>
-              <li>
-                Code APE : 6201Z, programmation
-                informatique
+                Téléphone :{" "}
+                <a
+                  href={`tel:${STUDIO.phoneHref}`}
+                  className="text-vermillion hover:underline"
+                >
+                  {STUDIO.phone}
+                </a>
               </li>
               <li>
                 Email :{" "}
@@ -51,6 +54,15 @@ export default function MentionsLegalesPage() {
                   {STUDIO.email}
                 </a>
               </li>
+              <li>SIREN : {STUDIO.siren}</li>
+              <li>SIRET : {STUDIO.siret}</li>
+              <li>
+                Immatriculé au Registre National des Entreprises (RNE) sous le
+                numéro {STUDIO.siren}
+              </li>
+              <li>
+                Code APE : {STUDIO.apeCode}, programmation informatique
+              </li>
             </ul>
             <p>
               TVA non applicable, article 293 B du Code général des impôts
@@ -59,7 +71,7 @@ export default function MentionsLegalesPage() {
           </LegalBlock>
 
           <LegalBlock title="Directeur de la publication">
-            <p>{STUDIO.displayName}, en qualité d&apos;éditeur du site.</p>
+            <p>{STUDIO.legalName}, en qualité d&apos;éditeur du site.</p>
           </LegalBlock>
 
           <LegalBlock title="Hébergement">
@@ -67,6 +79,15 @@ export default function MentionsLegalesPage() {
             <ul className="space-y-1">
               <li>GitHub, Inc.</li>
               <li>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</li>
+              <li>
+                Téléphone :{" "}
+                <a
+                  href="tel:+14154486673"
+                  className="text-vermillion hover:underline"
+                >
+                  +1 415 448 6673
+                </a>
+              </li>
               <li>
                 Site web :{" "}
                 <a
@@ -79,6 +100,17 @@ export default function MentionsLegalesPage() {
                 </a>
               </li>
             </ul>
+            <p>
+              Les serveurs sont situés aux États-Unis. L&apos;encadrement de ce
+              transfert est détaillé dans la{" "}
+              <a
+                href="/confidentialite"
+                className="text-vermillion hover:underline"
+              >
+                politique de confidentialité
+              </a>
+              .
+            </p>
           </LegalBlock>
 
           <LegalBlock title="Propriété intellectuelle">
