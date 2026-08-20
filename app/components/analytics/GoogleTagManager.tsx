@@ -6,7 +6,7 @@ import { GtmPageViews } from "./GtmPageViews";
  * Google Tag Manager + Consent Mode v2.
  *
  * GTM est le seul chargeur d'analytics du site : la balise GA4
- * (G-1G0S2BT7EW) vit dans le conteneur, pas dans le code. Ne jamais ajouter
+ * (G-T2CC1RGQ31) vit dans le conteneur, pas dans le code. Ne jamais ajouter
  * gtag.js en parallèle, sinon chaque visite serait comptée deux fois.
  *
  * Ordre d'exécution garanti :

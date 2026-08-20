@@ -20,7 +20,7 @@ type StoredConsent = { v: ConsentValue; t: number };
  * Conteneur Google Tag Manager propre à atelierwebfrance.
  *
  * GTM est le SEUL chargeur d'analytics du site : la balise GA4
- * (G-1G0S2BT7EW) est configurée à l'intérieur du conteneur, pas dans le code.
+ * (G-T2CC1RGQ31) est configurée à l'intérieur du conteneur, pas dans le code.
  * Cela évite le double comptage qu'entraînerait un gtag.js chargé en parallèle.
  *
  * Ce n'est pas un secret (il est visible dans le HTML public), d'où la valeur
@@ -31,8 +31,13 @@ type StoredConsent = { v: ConsentValue; t: number };
  */
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-K4NFS4XG";
 
-/** ID de mesure GA4, pour référence — à configurer DANS GTM, pas ici. */
-export const GA4_MEASUREMENT_ID = "G-1G0S2BT7EW";
+/**
+ * ID de mesure GA4, pour référence — à configurer DANS GTM, pas ici.
+ * Correspond au flux « AtelierWebFrance » (flux 15471205440) de la propriété
+ * atelierwebfrance.fr. Ne pas confondre avec G-1G0S2BT7EW, qui ne correspond
+ * à aucun flux existant et renvoyait une erreur 503.
+ */
+export const GA4_MEASUREMENT_ID = "G-T2CC1RGQ31";
 
 function parse(raw: string | null): StoredConsent | null {
   if (!raw) return null;
