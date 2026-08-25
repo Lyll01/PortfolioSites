@@ -15,7 +15,7 @@ export const PROJECT_TYPES: SelectItem[] = [
   {
     label: "Site existant",
     options: [
-      { value: "refonte", label: "Refonte de site — à partir de 390 €" },
+      { value: "refonte", label: "Refonte de site — à partir de 449 €" },
       { value: "google-business", label: "Fiche Google Business & Maps — 99 €" },
       { value: "modifications", label: "Modifications ponctuelles (10 / 20 / 40 €)" },
     ],
@@ -23,8 +23,8 @@ export const PROJECT_TYPES: SelectItem[] = [
   {
     label: "Référencement mensuel",
     options: [
-      { value: "referencement-confort", label: "Référencement Confort — 15 €/mois" },
-      { value: "referencement-croissance", label: "Référencement & Croissance web — 39 €/mois" },
+      { value: "referencement-confort", label: "Référencement Confort — 15 €/mois (engagement 3 mois)" },
+      { value: "referencement-croissance", label: "Référencement & Croissance web — 39 €/mois (engagement 3 mois)" },
     ],
   },
   { value: "autre", label: "Autre / je ne sais pas encore" },

@@ -73,11 +73,17 @@ export default function CgvPage() {
               389&nbsp;€, Business 749&nbsp;€, ou Sur mesure), incluant
               l&apos;hébergement et le certificat SSL (HTTPS) sans frais
               supplémentaire, abonnements mensuels de référencement
-              (Référencement Confort 15&nbsp;€, Référencement &amp; Croissance
-              web 39&nbsp;€), prestations complémentaires et grille de
-              modifications. Les prix sont indiqués
-              en euros et susceptibles de révision ; le tarif applicable est
-              celui en vigueur à la date de la commande.
+              (Référencement Confort 15&nbsp;€&nbsp;/&nbsp;mois, Référencement
+              &amp; Croissance web 39&nbsp;€&nbsp;/&nbsp;mois, tous deux soumis
+              à l&apos;engagement minimal de trois (3) mois prévu à
+              l&apos;article&nbsp;8), prestations
+              complémentaires (refonte de site à partir de 449&nbsp;€, fiche
+              Google Business Profile 99&nbsp;€ lorsqu&apos;elle est souscrite
+              seule) et grille de modifications ponctuelles (10&nbsp;€,
+              20&nbsp;€ ou 40&nbsp;€ selon la nature de la demande, tarifs
+              réduits de moitié pour les Clients abonnés). Les prix sont
+              indiqués en euros et susceptibles de révision ; le tarif
+              applicable est celui en vigueur à la date de la commande.
             </p>
             <p>
               Le Prestataire relève du régime de la micro-entreprise : TVA non
@@ -145,14 +151,29 @@ export default function CgvPage() {
           <LegalBlock title="Article 8 – Durée, engagement et résiliation">
             <p>
               L&apos;hébergement fourni avec la création du site est offert
-              pendant la durée de la mise en ligne, sans engagement. Les
-              abonnements de référencement Confort et Croissance web comportent
-              une durée d&apos;engagement minimale de trois (3) mois, courant à
-              compter du
-              premier mois complet. À l&apos;issue de la période initiale,
-              l&apos;abonnement se reconduit tacitement par mois. Chaque Partie
-              peut résilier moyennant un préavis de quinze (15) jours. Le mois
-              entamé reste dû et n&apos;est pas remboursé.
+              pendant la durée de la mise en ligne, sans engagement.
+            </p>
+            <p>
+              Les abonnements <strong>Référencement Confort</strong> et{" "}
+              <strong>Référencement &amp; Croissance web</strong> comportent une
+              durée d&apos;engagement minimale de trois (3) mois. Cette durée
+              est la contrepartie de la création et de l&apos;optimisation de la
+              fiche Google Business Profile, prestation unique facturée
+              99&nbsp;€ lorsqu&apos;elle est souscrite seule, comprise sans
+              supplément dans l&apos;abonnement et réalisée dès la souscription.
+              La période d&apos;engagement court à compter du premier mois
+              complet d&apos;abonnement. En cas de résiliation par le Client
+              avant le terme de cette période, les mensualités restant à courir
+              jusqu&apos;au terme des trois (3) mois demeurent exigibles ; le
+              Client peut, à son choix, s&apos;en acquitter en une seule fois.
+            </p>
+            <p>
+              À l&apos;issue de la période initiale, l&apos;abonnement se
+              reconduit tacitement par mois. Chaque Partie peut alors résilier
+              moyennant un préavis de quinze (15) jours. Le mois entamé reste dû
+              et n&apos;est pas remboursé. Le présent article s&apos;applique
+              sans préjudice du droit de rétractation prévu à
+              l&apos;article&nbsp;14.
             </p>
           </LegalBlock>
 

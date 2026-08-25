@@ -99,7 +99,7 @@ export const EXTRA_SERVICES: ExtraService[] = [
     price: "99 €",
     description:
       "Apparaissez sur Google Maps et dans la recherche locale. Création et optimisation complète de votre fiche.",
-    note: "Inclus dans les abonnements de référencement Confort et Croissance web.",
+    note: "Offerte avec les abonnements de référencement Confort et Croissance web (engagement 3 mois minimum).",
   },
 ];
 
@@ -149,6 +149,8 @@ export type RecurringPlan = {
   italic: string;
   tagline: string;
   price: string;
+  /** Durée d'engagement affichée sous le prix (ex. "Engagement 3 mois minimum"). */
+  commitment?: string;
   included: string[];
   excluded?: string[];
   note?: string;
@@ -162,6 +164,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     italic: "Confort",
     tagline: "Recommandé — votre présence locale en place sur Google",
     price: "15 €/mois",
+    commitment: "Engagement 3 mois minimum",
     included: [
       "Mise en place & optimisation de votre fiche Google Business Profile (Google Maps + recherche)",
       "Support prioritaire (réponse sous 24 à 48h ouvrées)",
@@ -169,7 +172,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
       "Modifications réalisées en priorité",
       "Bilan de santé du site 2×/an (vitesse, disponibilité, sécurité)",
     ],
-    note: "L'optimisation de la fiche Google est une prestation unique réalisée à la souscription. Tarif membre sur les modifications : texte 5 €, visuelle 10 €, importante 20 €.",
+    note: "Engagement minimum de 3 mois : la création et l'optimisation de votre fiche Google Business (99 € seule) est offerte et réalisée dès la souscription. Au-delà des 3 mois, résiliable à tout moment. Tarif membre sur les modifications : texte 5 €, visuelle 10 €, importante 20 €.",
     objective:
       "Vous apparaissez sur Google Maps, et chaque évolution de votre site vous revient moins cher.",
     featured: true,
@@ -179,6 +182,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
     italic: "& Croissance web",
     tagline: "Pour être trouvé sur Google et attirer plus de clients",
     price: "39 €/mois",
+    commitment: "Engagement 3 mois minimum",
     included: [
       "Tout le forfait Confort",
       "Suivi & optimisation continue de votre fiche Google Business Profile",
@@ -188,7 +192,7 @@ export const RECURRING_PLANS: RecurringPlan[] = [
       "Suivi mensuel des performances (trafic + positionnement)",
       "2 modifications légères incluses / mois",
     ],
-    note: "Le service de modifications vise à maintenir et améliorer le site, et non à fonctionner comme un service de développement à la demande illimité.",
+    note: "Engagement minimum de 3 mois : la création et l'optimisation de votre fiche Google Business (99 € seule) est offerte et réalisée dès la souscription. Au-delà des 3 mois, résiliable à tout moment. Le service de modifications vise à maintenir et améliorer le site, et non à fonctionner comme un service de développement à la demande illimité.",
     objective:
       "Améliorer votre position sur Google et attirer plus de clients chaque mois.",
   },

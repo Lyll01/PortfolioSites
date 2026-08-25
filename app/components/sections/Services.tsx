@@ -43,7 +43,7 @@ export function Services() {
               <em className="italic-display">on le fait vivre</em>.
             </>
           }
-          intro="Un site vitrine livré clé en main — hébergement et HTTPS offerts —, puis un abonnement mensuel de référencement pour être trouvé sur Google. Tarifs transparents, sans engagement."
+          intro="Un site vitrine livré clé en main — hébergement et HTTPS offerts —, puis un abonnement mensuel de référencement pour être trouvé sur Google. Tarifs transparents : la création se paie une fois, sans engagement."
           theme="dark"
         />
 
@@ -202,7 +202,7 @@ export function Services() {
               step="02"
               kind="Référencement mensuel"
               title="Pour que votre site soit trouvé sur Google et attire des clients."
-              note="Abonnement mensuel · sans engagement · résiliable à tout moment"
+              note="Abonnement mensuel · engagement 3 mois minimum · résiliable ensuite à tout moment"
             />
           </Reveal>
 
@@ -342,6 +342,15 @@ function RecurringCard({ plan }: { plan: RecurringPlan }) {
         <p className="mt-5 font-display text-4xl text-cream lg:text-5xl">
           {plan.price}
         </p>
+        {plan.commitment && (
+          <p
+            className={`mono-label mt-2 ${
+              featured ? "!text-vermillion" : "!text-cream/50"
+            }`}
+          >
+            {plan.commitment}
+          </p>
+        )}
       </header>
 
       <ul className="space-y-2 text-sm text-cream/85">
