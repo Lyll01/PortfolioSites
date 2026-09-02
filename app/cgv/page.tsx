@@ -268,8 +268,8 @@ export default function CgvPage() {
             </p>
             <blockquote className="border-l-2 border-ink/20 pl-4 text-sm italic">
               <p>
-                À l&apos;attention de {STUDIO.legalName}, {STUDIO.address} —{" "}
-                {STUDIO.email}
+                À l&apos;attention de {STUDIO.legalName} — {STUDIO.displayName},{" "}
+                {STUDIO.address} — {STUDIO.email}
               </p>
               <p>
                 Je vous notifie par la présente ma rétractation du contrat
@@ -284,7 +284,9 @@ export default function CgvPage() {
             TODO — MÉDIATION DE LA CONSOMMATION (art. L.612-1 et L.616-1 du Code
             de la consommation). Obligatoire dès qu'un client est un
             consommateur. Décommenter et compléter après signature de la
-            convention d'adhésion, et synchroniser avec les mentions légales.
+            convention d'adhésion, puis renuméroter « Droit applicable » en
+            article 17 — ici comme dans CGV_sites_web.docx et
+            Contrat_prestation_site_web.docx, qui suivent la même numérotation.
 
           <LegalBlock title="Article 16 – Médiation de la consommation">
             <p>
@@ -300,7 +302,7 @@ export default function CgvPage() {
           </LegalBlock>
           */}
 
-          <LegalBlock title="Article 17 – Droit applicable et litiges">
+          <LegalBlock title="Article 16 – Droit applicable et litiges">
             <p>
               Les présentes CGV sont soumises au droit français. En cas de
               différend, les Parties rechercheront une solution amiable avant
