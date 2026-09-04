@@ -3,7 +3,7 @@ import { Footer } from "./components/layout/Footer";
 import { Hero } from "./components/sections/Hero";
 import { Services } from "./components/sections/Services";
 import { Process } from "./components/sections/Process";
-import { Cases } from "./components/sections/Cases";
+import { CasesTeaser } from "./components/sections/Cases";
 import { Testimonials } from "./components/sections/Testimonials";
 import { Contact } from "./components/sections/Contact";
 import { STUDIO } from "./data/navigation";
@@ -16,7 +16,7 @@ export default function HomePage() {
         <Hero />
         <Services />
         <Process />
-        <Cases />
+        <CasesTeaser />
         <Testimonials />
         <Contact />
       </main>
@@ -133,59 +133,6 @@ export default function HomePage() {
         }}
       />
 
-      {/* JSON-LD — FAQPage (capte les requêtes locales sur Google) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": `${STUDIO.url}/#faq`,
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Combien coûte la création d'un site internet professionnel ?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "La création d'un site internet pro et sur-mesure commence à 389 € pour un site one-page, et 749 € pour un site vitrine de 4 à 6 pages. Les projets spécifiques sont sur devis gratuit. Des prix volontairement bas et transparents, sans engagement.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "En combien de temps mon site est-il livré ?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Un site one-page est livré rapidement (quelques jours), et un site vitrine multi-pages en 1 à 3 semaines selon le projet. La livraison rapide est l'un de nos engagements.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Pour qui sont vos sites internet ?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Nous créons des sites internet sur-mesure pour les TPE, PME, indépendants, auto-entrepreneurs, artisans et associations qui veulent une présence en ligne professionnelle à prix accessible.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Intervenez-vous à Toulouse, Montauban et Caussade ?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Oui. Basés à Toulouse, nous nous déplaçons pour les entretiens à Toulouse, Montauban, Caussade et alentours. Nous travaillons aussi à distance partout en France.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Aidez-vous à apparaître sur Google ?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Oui. Nous optimisons le référencement Google local (SEO) et créons votre fiche Google Business Profile pour que vos clients vous trouvent sur Google et Google Maps.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
     </>
   );
 }

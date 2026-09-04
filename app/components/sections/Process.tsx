@@ -1,18 +1,23 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Container } from "../ui/Container";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 import { Button } from "../ui/Button";
 import { PROCESS_STEPS, type ProcessStep } from "@/app/data/process";
 
+const STEP_COUNT = PROCESS_STEPS.length.toString().padStart(2, "0");
+
+/**
+ * Aperçu de la méthode sur la home : les étapes, sans le détail des livrables.
+ * Le déroulé complet est sur /contact ("ce qui se passe après votre message").
+ */
 export function Process() {
   return (
-    <section
-      id="process"
-      className="bg-bone-deep py-24 lg:py-40"
-    >
+    <section id="process" className="scroll-mt-20 bg-bone-deep py-24 lg:py-40">
       <Container>
         <SectionHeader
-          eyebrow="MÉTHODE · 04 ÉTAPES"
+          eyebrow={`MÉTHODE · ${STEP_COUNT} ÉTAPES`}
           title={
             <>
               Un process simple,{" "}
@@ -22,18 +27,76 @@ export function Process() {
           intro="Du premier échange à la mise en ligne, comptez en moyenne 2 à 4 semaines. Vous savez à chaque étape où on en est."
         />
 
+        <ol className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+          {PROCESS_STEPS.map((step, i) => (
+            <Reveal key={step.number} as="li" delay={i * 80} className="block">
+              <div className="flex h-full flex-col gap-4 border border-ink/15 p-7 transition-colors hover:border-ink/35 lg:p-8">
+                <div className="flex items-baseline justify-between gap-4">
+                  <span
+                    aria-hidden
+                    className="font-display text-4xl leading-none text-ash/40"
+                  >
+                    {step.number.toString().padStart(2, "0")}
+                  </span>
+                  {step.duration && (
+                    <span className="mono-label text-right">
+                      {step.duration}
+                    </span>
+                  )}
+                </div>
+                <h3 className="display text-2xl text-ink">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-soft">
+                  {step.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+
+        <div className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-ink/15 pt-8 sm:flex-row sm:items-center">
+          <Link
+            href="/contact#process"
+            className="group inline-flex items-center gap-2 text-vermillion transition-colors hover:text-vermillion-deep"
+          >
+            Voir le déroulé détaillé, étape par étape
+            <ArrowRight
+              size={18}
+              strokeWidth={1.5}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
+          <Button href="#contact" variant="primary" size="lg">
+            Discuter du projet →
+          </Button>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+/**
+ * Déroulé complet avec les livrables de chaque étape — page /contact.
+ */
+export function ProcessDetailed() {
+  return (
+    <section id="process" className="scroll-mt-20 bg-bone-deep py-24 lg:py-32">
+      <Container>
+        <SectionHeader
+          eyebrow={`MÉTHODE · ${STEP_COUNT} ÉTAPES`}
+          title={
+            <>
+              Ce qui se passe{" "}
+              <em className="italic-display">après votre message</em>.
+            </>
+          }
+          intro="Du premier échange à la mise en ligne, comptez en moyenne 2 à 4 semaines. Vous savez à chaque étape où on en est, et ce que vous recevez."
+        />
+
         <ol className="mt-16 lg:mt-24">
           {PROCESS_STEPS.map((step) => (
             <Step key={step.number} step={step} />
           ))}
         </ol>
-
-        <div className="mt-24 flex flex-col items-center gap-6 text-center">
-          <p className="text-ink-soft">Prêt à démarrer ?</p>
-          <Button href="#contact" variant="primary" size="lg">
-            Discuter du projet →
-          </Button>
-        </div>
       </Container>
     </section>
   );

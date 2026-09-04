@@ -6,10 +6,11 @@ import { NAV_LINKS, STUDIO } from "@/app/data/navigation";
 import { GTM_ID } from "../analytics/consent";
 
 const OFFERS = [
-  { label: "Création de sites", href: "/#offre-creation" },
-  { label: "Refonte", href: "/#offre-refonte" },
-  { label: "Référencement local", href: "/#offre-referencement" },
-  { label: "Maintenance", href: "/#offre-maintenance" },
+  { label: "Création de sites", href: "/tarifs#offre-creation" },
+  { label: "Refonte", href: "/tarifs#offre-refonte" },
+  { label: "Référencement local", href: "/tarifs#offre-referencement" },
+  { label: "Modifications", href: "/tarifs#offre-modifications" },
+  { label: "Questions fréquentes", href: "/tarifs#faq" },
 ];
 
 const LEGAL = [
@@ -50,12 +51,21 @@ export function Footer() {
             <ul className="mt-6 space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.id}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-cream/80 transition-colors hover:text-vermillion"
-                  >
-                    {link.label}
-                  </a>
+                  {link.kind === "page" ? (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-cream/80 transition-colors hover:text-vermillion"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-sm text-cream/80 transition-colors hover:text-vermillion"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -67,12 +77,12 @@ export function Footer() {
             <ul className="mt-6 space-y-3">
               {OFFERS.map((o) => (
                 <li key={o.label}>
-                  <a
+                  <Link
                     href={o.href}
                     className="text-sm text-cream/80 transition-colors hover:text-vermillion"
                   >
                     {o.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -93,7 +103,7 @@ export function Footer() {
             </ul>
 
             <div className="mt-8">
-              <Button href="/#contact" variant="primary" size="sm">
+              <Button href="/contact" variant="primary" size="sm">
                 Prendre RDV →
               </Button>
             </div>

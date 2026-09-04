@@ -2,14 +2,20 @@ export type NavLink = {
   label: string;
   href: string;
   id: string;
+  /** "page" = page dédiée (navigation), "anchor" = section de la home (scroll). */
+  kind: "page" | "anchor";
 };
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Services", href: "/#services", id: "services" },
-  { label: "Réalisations", href: "/#realisations", id: "realisations" },
-  { label: "Process", href: "/#process", id: "process" },
-  { label: "Témoignages", href: "/#temoignages", id: "temoignages" },
-  { label: "Contact", href: "/#contact", id: "contact" },
+  { label: "Tarifs", href: "/tarifs", id: "tarifs", kind: "page" },
+  {
+    label: "Réalisations",
+    href: "/realisations",
+    id: "realisations",
+    kind: "page",
+  },
+  { label: "Méthode", href: "/#process", id: "process", kind: "anchor" },
+  { label: "Contact", href: "/contact", id: "contact", kind: "page" },
 ];
 
 export const SOCIAL_LINKS = [

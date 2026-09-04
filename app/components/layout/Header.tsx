@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -17,6 +18,11 @@ function useScrolled(threshold = 50) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [threshold]);
   return scrolled;
+}
+
+/** Normalise "/tarifs/" → "/tarifs" (trailingSlash activé dans next.config). */
+function normalize(path: string) {
+  return path !== "/" && path.endsWith("/") ? path.slice(0, -1) : path;
 }
 
 function useActiveSection(ids: string[]) {
@@ -44,8 +50,23 @@ function useActiveSection(ids: string[]) {
 
 export function Header() {
   const scrolled = useScrolled(50);
-  const active = useActiveSection(NAV_LINKS.map((l) => l.id));
+  const pathname = normalize(usePathname() ?? "/");
+  const onHome = pathname === "/";
+  // Les ancres ne sont observables que sur la home : ailleurs, rien à suivre.
+  const anchorIds = useMemo(
+    () =>
+      onHome
+        ? NAV_LINKS.filter((l) => l.kind === "anchor").map((l) => l.id)
+        : [],
+    [onHome]
+  );
+  const activeAnchor = useActiveSection(anchorIds);
   const [open, setOpen] = useState(false);
+
+  const isActive = (link: (typeof NAV_LINKS)[number]) =>
+    link.kind === "page"
+      ? pathname === normalize(link.href)
+      : activeAnchor === link.id;
 
   // Body scroll lock for mobile menu
   useEffect(() => {
@@ -93,29 +114,45 @@ export function Header() {
 
             <ul className="hidden items-center gap-8 lg:flex">
               {NAV_LINKS.map((link) => {
-                const isActive = active === link.id;
+                const current = isActive(link);
+                const className = `relative text-sm text-ink/80 transition-colors hover:text-vermillion ${
+                  current ? "!text-ink" : ""
+                }`;
+                const content = (
+                  <>
+                    {link.label}
+                    {current && (
+                      <span className="absolute -bottom-1.5 left-0 h-0.5 w-full bg-vermillion" />
+                    )}
+                  </>
+                );
                 return (
                   <li key={link.id}>
-                    <a
-                      href={link.href}
-                      aria-current={isActive ? "true" : undefined}
-                      className={`relative text-sm text-ink/80 transition-colors hover:text-vermillion ${
-                        isActive ? "!text-ink" : ""
-                      }`}
-                    >
-                      {link.label}
-                      {isActive && (
-                        <span className="absolute -bottom-1.5 left-0 h-0.5 w-full bg-vermillion" />
-                      )}
-                    </a>
+                    {link.kind === "page" ? (
+                      <Link
+                        href={link.href}
+                        aria-current={current ? "page" : undefined}
+                        className={className}
+                      >
+                        {content}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        aria-current={current ? "true" : undefined}
+                        className={className}
+                      >
+                        {content}
+                      </a>
+                    )}
                   </li>
                 );
               })}
             </ul>
 
             <div className="hidden lg:block">
-              <Button href="/#contact" variant="primary" size="sm">
-                Discuter →
+              <Button href="/contact" variant="primary" size="sm">
+                Devis gratuit →
               </Button>
             </div>
 
@@ -168,20 +205,31 @@ export function Header() {
                     animation: `rise 0.5s ${0.05 * i + 0.1}s cubic-bezier(0.22, 1, 0.36, 1) forwards`,
                   }}
                 >
-                  <a
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="display block text-5xl text-ink transition-colors hover:text-vermillion"
-                  >
-                    {link.label}
-                  </a>
+                  {link.kind === "page" ? (
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={isActive(link) ? "page" : undefined}
+                      className="display block text-5xl text-ink transition-colors hover:text-vermillion"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="display block text-5xl text-ink transition-colors hover:text-vermillion"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
 
             <div className="pb-12">
               <Button
-                href="/#contact"
+                href="/contact"
                 variant="primary"
                 size="lg"
                 className="w-full"

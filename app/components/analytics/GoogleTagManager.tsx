@@ -2,19 +2,52 @@ import Script from "next/script";
 import { GTM_ID } from "./consent";
 import { GtmPageViews } from "./GtmPageViews";
 
+const CONSENT_DEFAULT_JS = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+window.gtag = gtag;
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  wait_for_update: 500
+});
+`;
+
 /**
- * Google Tag Manager + Consent Mode v2.
+ * Consent Mode v2 — état par défaut « denied ». À placer dans le <head> du
+ * layout racine, en tout premier.
+ *
+ * Volontairement un <script> inline brut et NON un next/script
+ * `beforeInteractive` : en export statique, cette stratégie ne hissait pas le
+ * script dans le <head>. Il n'apparaissait que dans la charge utile RSC et
+ * n'était donc exécuté qu'à l'hydratation — après le HTML de la page, et en
+ * déclenchant une erreur d'hydratation React (<script> rendu hors document).
+ *
+ * Ici, le script est présent dans le HTML servi et s'exécute avant tout le
+ * reste, donc avant le conteneur GTM (chargé en `afterInteractive`). Sans
+ * cela, les balises déposeraient leurs cookies dès la première visite.
+ */
+export function GtmConsentDefault() {
+  if (!GTM_ID) return null;
+
+  return (
+    <script
+      id="gtm-consent-default"
+      dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_JS }}
+    />
+  );
+}
+
+/**
+ * Chargeur du conteneur Google Tag Manager. À placer dans <body>.
  *
  * GTM est le seul chargeur d'analytics du site : la balise GA4
  * (G-T2CC1RGQ31) vit dans le conteneur, pas dans le code. Ne jamais ajouter
  * gtag.js en parallèle, sinon chaque visite serait comptée deux fois.
  *
- * Ordre d'exécution garanti :
- *  1. `beforeInteractive` — Consent Mode par défaut sur « denied ». Next hisse
- *     ce script dans le <head>, donc il s'exécute AVANT le chargement de GTM.
- *     Sans cela, les balises déposeraient leurs cookies dès la première visite.
- *  2. `afterInteractive` — chargement du conteneur.
- *
+ * Le consentement par défaut est posé en amont par <GtmConsentDefault />.
  * Côté GTM, la balise GA4 doit être conditionnée au consentement :
  * Paramètres de la balise → Consentement supplémentaire requis →
  * `analytics_storage`. CookieBanner pousse le `consent update` au clic.
@@ -24,21 +57,6 @@ export function GoogleTagManager() {
 
   return (
     <>
-      <Script id="gtm-consent-default" strategy="beforeInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          window.gtag = gtag;
-          gtag('consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            wait_for_update: 500
-          });
-        `}
-      </Script>
-
       <Script id="gtm-loader" strategy="afterInteractive">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

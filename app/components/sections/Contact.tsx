@@ -21,9 +21,24 @@ const REASSURANCES = [
   "Échange humain",
 ];
 
-export function Contact() {
+type ContactProps = {
+  /**
+   * Sur /contact, le bloc est en haut de page : il porte le <h1> et
+   * compense la hauteur du header fixe. Sur la home, il reste une section.
+   */
+  asPageHeader?: boolean;
+};
+
+export function Contact({ asPageHeader = false }: ContactProps = {}) {
+  const Heading = asPageHeader ? "h1" : "h2";
+
   return (
-    <section id="contact" className="bg-bone py-24 lg:py-40">
+    <section
+      id="contact"
+      className={`scroll-mt-20 bg-bone ${
+        asPageHeader ? "pt-32 pb-24 lg:pt-40 lg:pb-32" : "py-24 lg:py-40"
+      }`}
+    >
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
           {/* Left: info */}
@@ -32,10 +47,10 @@ export function Contact() {
               <Eyebrow>CONTACT · RÉPONSE SOUS 48H</Eyebrow>
             </Reveal>
             <Reveal delay={80}>
-              <h2 className="display mt-6 text-4xl text-ink sm:text-5xl lg:text-6xl">
+              <Heading className="display mt-6 text-4xl text-ink sm:text-5xl lg:text-6xl">
                 Parlons de votre{" "}
                 <em className="italic-display">projet</em>.
-              </h2>
+              </Heading>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">

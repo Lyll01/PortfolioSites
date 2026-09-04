@@ -81,7 +81,7 @@ export function Hero() {
                 <Button href="#contact" variant="primary" size="lg">
                   Discuter du projet →
                 </Button>
-                <Button href="#realisations" variant="ghost" size="lg">
+                <Button href="/realisations" variant="ghost" size="lg">
                   Voir les réalisations
                 </Button>
               </div>

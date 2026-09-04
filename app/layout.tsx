@@ -9,6 +9,7 @@ import "./globals.css";
 import {
   GoogleTagManager,
   GoogleTagManagerNoScript,
+  GtmConsentDefault,
 } from "./components/analytics/GoogleTagManager";
 import { CookieBanner } from "./components/analytics/CookieBanner";
 
@@ -139,13 +140,17 @@ export default function RootLayout({
       lang="fr"
       className={`${fraunces.variable} ${geist.variable} ${jetbrains.variable} ${instrument.variable}`}
     >
+      <head>
+        {/* Consent Mode v2 : « denied » par défaut, avant tout autre script. */}
+        <GtmConsentDefault />
+      </head>
       <body className="grain">
         <GoogleTagManagerNoScript />
         {children}
         <CookieBanner />
+        {/* Conteneur GTM, chargé après l'hydratation. */}
+        <GoogleTagManager />
       </body>
-      {/* Consent Mode v2 (denied par défaut) puis chargement du conteneur GTM. */}
-      <GoogleTagManager />
     </html>
   );
 }
