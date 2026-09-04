@@ -54,6 +54,6 @@ export const STUDIO = {
   region: "Occitanie",
   country: "France",
   // Zones d'intervention pour le SEO local (déplacements possibles pour entretiens).
-  serviceAreas: ["Toulouse", "Montauban", "Caussade", "Occitanie"],
-  serviceAreaLabel: "Toulouse, Montauban, Caussade et alentours",
+  serviceAreas: ["Toulouse", "Montauban", "Occitanie"],
+  serviceAreaLabel: "Toulouse, Montauban, et alentours",
 };

@@ -7,7 +7,7 @@ import { STUDIO } from "../data/navigation";
 
 const TITLE = "Contact & devis gratuit — création de site internet à Toulouse";
 const DESCRIPTION =
-  "Décrivez votre projet en quelques lignes : réponse personnelle sous 48h ouvrées, devis détaillé gratuit et sans engagement. Toulouse, Montauban, Caussade et partout en France à distance.";
+  "Décrivez votre projet en quelques lignes : réponse personnelle sous 48h ouvrées, devis détaillé gratuit et sans engagement. Toulouse, Montauban, et partout en France à distance.";
 
 export const metadata: Metadata = {
   title: TITLE,

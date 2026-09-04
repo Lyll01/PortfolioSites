@@ -59,7 +59,6 @@ export const metadata: Metadata = {
     "site web professionnel sur-mesure",
     "site internet pas cher Toulouse",
     "création site web Montauban",
-    "site internet Caussade",
     "site pro pas cher TPE",
     "site web PME",
     "site internet association",

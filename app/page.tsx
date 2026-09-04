@@ -53,7 +53,6 @@ export default function HomePage() {
             areaServed: [
               { "@type": "City", name: "Toulouse" },
               { "@type": "City", name: "Montauban" },
-              { "@type": "City", name: "Caussade" },
               {
                 "@type": "AdministrativeArea",
                 name: "Tarn-et-Garonne",

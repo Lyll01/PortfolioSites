@@ -25,9 +25,9 @@ export const FAQ_ITEMS: FaqItem[] = [
       "Nous créons des sites internet sur-mesure pour les TPE, PME, indépendants, auto-entrepreneurs, artisans et associations qui veulent une présence en ligne professionnelle à prix accessible.",
   },
   {
-    question: "Intervenez-vous à Toulouse, Montauban et Caussade ?",
+    question: "Intervenez-vous à Toulouse, Montauban et alentours ?",
     answer:
-      "Oui. Basés à Toulouse, nous nous déplaçons pour les entretiens à Toulouse, Montauban, Caussade et alentours. Nous travaillons aussi à distance partout en France.",
+      "Oui. Basés à Toulouse, nous nous déplaçons pour les entretiens à Toulouse, Montauban, et alentours. Nous travaillons aussi à distance partout en France.",
   },
   {
     question: "Aidez-vous à apparaître sur Google ?",
