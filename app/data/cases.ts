@@ -28,12 +28,12 @@ export const CASES: Case[] = [
     italic: "local",
     description:
       "Un festival qui n'avait pas de site web a vu sa visibilité et sa crédibilité grandir grâce à un site sur-mesure dans leur univers, et un référencement dans toute la région pour attirer de nouveaux festivaliers.",
-    services: ["Pack Business", "Référencement local", "Option: Newsletter"],
+    services: ["Pack Business", "Référencement & Croissance web", "Option: Newsletter"],
     results: [
   {
     label: "Visites du site",
     before: "0 / mois",
-    after: "300 / mois"
+    after: "1800 / mois"
   },
   {
     label: "Visibilité Google",
@@ -58,7 +58,7 @@ export const CASES: Case[] = [
     italic: "Google Business",
     description:
       "Une artisane qui voulait sortir des annuaires. Site simple, rapide, design soigné, et un travail de référencement local autour de Toulouse pour transformer chaque recherche en appel.",
-    services: ["Pack Starter", "Référencement local", "Google Business"],
+    services: ["Pack Starter", "Référencement confort", "Google Business"],
     results: [
   {
     label: "Nouveau clients",
