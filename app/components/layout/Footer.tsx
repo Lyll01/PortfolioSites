@@ -9,6 +9,7 @@ const OFFERS = [
   { label: "Création de sites", href: "/tarifs#offre-creation" },
   { label: "Refonte", href: "/tarifs#offre-refonte" },
   { label: "Référencement local", href: "/tarifs#offre-referencement" },
+  { label: "Plaque NFC avis Google", href: "/tarifs#plaque-nfc" },
   { label: "Modifications", href: "/tarifs#offre-modifications" },
   { label: "Questions fréquentes", href: "/tarifs#faq" },
 ];

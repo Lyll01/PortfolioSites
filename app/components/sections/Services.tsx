@@ -8,6 +8,7 @@ import {
   SERVICES,
   EXTRA_SERVICES,
   RECURRING_PLANS,
+  NFC_REVIEW_PLAQUE,
 } from "@/app/data/services";
 
 /**
@@ -21,10 +22,17 @@ export function Services() {
     ...EXTRA_SERVICES.map((s) => ({
       label: s.label,
       price: s.pricePrefix ? `${s.pricePrefix} ${s.price}` : s.price,
+      highlight: false,
     })),
+    {
+      label: `${NFC_REVIEW_PLAQUE.name} ${NFC_REVIEW_PLAQUE.italic}`,
+      price: NFC_REVIEW_PLAQUE.price,
+      highlight: true,
+    },
     ...RECURRING_PLANS.filter((p) => p.featured).map((p) => ({
       label: `${p.name} ${p.italic}`,
       price: `Dès ${p.price}`,
+      highlight: false,
     })),
   ];
 
@@ -89,7 +97,14 @@ export function Services() {
                       key={item.label}
                       className="flex items-baseline justify-between gap-6 border-b border-cream/10 pb-3 text-sm"
                     >
-                      <span className="text-cream/85">{item.label}</span>
+                      <span className="text-cream/85">
+                        {item.label}
+                        {item.highlight && (
+                          <span className="ml-2 border border-vermillion/50 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-vermillion">
+                            Nouveau
+                          </span>
+                        )}
+                      </span>
                       <span className="font-display shrink-0 text-lg text-vermillion">
                         {item.price}
                       </span>
@@ -97,9 +112,9 @@ export function Services() {
                   ))}
                 </ul>
                 <p className="mt-5 text-sm text-cream/55">
-                  Refonte, fiche Google Business, modifications à l&apos;acte et
-                  abonnements de référencement : tout est détaillé, prix
-                  compris.
+                  Refonte, fiche Google Business, plaque NFC pour collecter des
+                  avis, modifications à l&apos;acte et abonnements de
+                  référencement : tout est détaillé, prix compris.
                 </p>
               </div>
 

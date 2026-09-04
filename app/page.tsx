@@ -66,6 +66,7 @@ export default function HomePage() {
             ],
             knowsAbout: [
               "Création de site internet",
+              "Plaque NFC avis Google",
               "Site web sur-mesure",
               "Site internet pas cher",
               "Référencement Google local (SEO)",
@@ -100,6 +101,14 @@ export default function HomePage() {
                   name: "Pack Sur-mesure — Projet spécifique",
                   description:
                     "Site internet entièrement sur-mesure adapté à votre projet, sur devis gratuit. Hébergement et HTTPS offerts.",
+                  priceCurrency: "EUR",
+                },
+                {
+                  "@type": "Offer",
+                  name: "Plaque NFC Avis Google",
+                  description:
+                    "Plaque acrylique NFC programmée sur votre fiche Google Business : le client pose son téléphone et la page d'avis s'ouvre. Livrée configurée, sans abonnement.",
+                  price: "39",
                   priceCurrency: "EUR",
                 },
                 {

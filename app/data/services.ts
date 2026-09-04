@@ -197,3 +197,47 @@ export const RECURRING_PLANS: RecurringPlan[] = [
       "Améliorer votre position sur Google et attirer plus de clients chaque mois.",
   },
 ];
+
+// Produit physique mis en avant sur /tarifs (bloc dédié, pas une simple carte)
+export type FeaturedProduct = {
+  name: string;
+  italic: string;
+  tagline: string;
+  price: string;
+  priceNote: string;
+  intro: string;
+  benefits: { title: string; text: string }[];
+  included: string[];
+  note: string;
+};
+
+export const NFC_REVIEW_PLAQUE: FeaturedProduct = {
+  name: "Plaque NFC",
+  italic: "Avis Google",
+  tagline: "PLUS D'AVIS, SANS AVOIR À LES DEMANDER",
+  price: "39 €",
+  priceNote: "Livrée configurée · sans abonnement",
+  intro:
+    "Vos clients contents ne laissent presque jamais d'avis. Pas par mauvaise volonté : il faut chercher votre fiche, se connecter, trouver le bouton. La plaque supprime toutes ces étapes. Le client pose son téléphone dessus, la page d'avis de votre fiche Google s'ouvre. Il ne lui reste qu'à mettre les étoiles.",
+  benefits: [
+    {
+      title: "Un geste, pas une démarche",
+      text: "Rien à installer, aucun QR code à cadrer, aucune adresse à taper. Le téléphone touche la plaque, la page s'ouvre. iPhone comme Android.",
+    },
+    {
+      title: "Des avis qui font monter votre fiche",
+      text: "Le nombre et la fraîcheur des avis pèsent lourd dans le classement Google local. Chaque nouvel avis renforce votre position sur les recherches de votre secteur.",
+    },
+    {
+      title: "Posée là où ça compte",
+      text: "Acrylique avec adhésif fort au dos : comptoir, caisse, table, vitrine, tableau de bord. Vous la collez une fois, elle travaille tous les jours.",
+    },
+  ],
+  included: [
+    "Plaque acrylique NFC, adhésif fort au dos",
+    "Puce programmée sur votre fiche Google Business",
+    "Testée sur iPhone et Android avant l'envoi",
+    "Reprogrammable si votre fiche évolue",
+  ],
+  note: "Nécessite une fiche Google Business active. Vous n'en avez pas ? Nous la créons et l'optimisons pour 99 € — offerte avec les abonnements de référencement.",
+};

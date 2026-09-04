@@ -3,6 +3,7 @@ import { ShieldCheck, Check, X, ArrowDown, ServerCog } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Reveal } from "../ui/Reveal";
 import { ServiceCard } from "./ServiceCard";
+import { NfcPlaque } from "./NfcPlaque";
 import {
   SERVICES,
   EXTRA_SERVICES,
@@ -136,6 +137,8 @@ export function Pricing() {
                     ))}
                   </div>
                 )}
+
+                <NfcPlaque />
 
                 {MODIFICATIONS.length > 0 && (
                   <div
